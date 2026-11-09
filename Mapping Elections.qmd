@@ -1,0 +1,259 @@
+---
+title: "Mapping Elections"
+format: gfm
+---
+
+[source](https://whittkilburn.github.io/inpolr/ch6.html#mapping-elections-in-red-blue-and-purple)
+
+```{r}
+options(paged.print = FALSE,
+        tigris_use_cache = TRUE)
+```
+
+# Libraries
+
+```{r}
+#| message: false
+library(sf)
+library(magrittr)
+library(tidyverse)
+library(collapse)
+library(cartogram)
+library(leaflet)
+counties <- tigris::counties
+suggest_crs <- crsuggest::suggest_crs
+fread <- data.table::fread
+iif <- kit::iif
+```
+
+# Mapping elections
+
+## Michigan Counties
+
+```{r}
+michigan <- counties("Michigan", cb = T, resolution = "20m")
+```
+
+```{r}
+suggest_crs(michigan)
+```
+
+```{r}
+(michigan %<>% st_transform(6497))
+```
+
+```{r}
+michigan %>% ggplot() +
+  geom_sf()
+```
+
+The election data, michigan12_16.csv, contains County-level presidential vote counts for 2012 and 2016. It is organized with Counties on rows and votes, along with various other county characteristics on the columns.
+
+```{r}
+(MI1216 <- fread("data/michigan12_16.csv")) %>% head
+```
+
+```{r}
+michigan <- michigan %>% roworder(NAME) %>% add_vars(MI1216)
+```
+
+```{r}
+glimpse(michigan)
+```
+
+## Choropleth of county-level election results
+
+We need to specify for the map which counties each candidate won. One way to do this would be to specify an indicator column that takes the values 1 if Clinton won and 0 if Trump won. 
+
+```{r}
+settransform(michigan,
+             indicator = qF(iif(clinton_vote > trump_vote, "Clinton", "Trump")))
+```
+
+```{r}
+michigan %>% ggplot() +
+  geom_sf(aes(fill = indicator)) +
+  labs(title = "Michigan County level vote",
+       subtitle = "2016 presidential election") +
+  scale_fill_manual(values = c("blue", "red"), 
+                    name = "popular vote winner")
+```
+
+## Blending counties: purple
+
+```{r}
+settransform(michigan, margin = trump_percent - clinton_percent)
+```
+
+```{r}
+ggplot(michigan) + 
+  geom_sf(aes(fill = margin)) + 
+  labs(title = "Michigan Counties, 2016 presidential election",
+       subtitle = "percentage margin of victory by Trump (red)
+                  or Clinton (blue)") +
+  scale_fill_gradient2(low = "blue", mid = "purple", high = "red") +
+  theme_void() +
+  theme(legend.position = "bottom")
+```
+
+```{r}
+ggplot(michigan) + 
+  geom_sf(aes(fill = margin)) + 
+  labs(title = "Michigan Counties, 2016 presidential election",
+       subtitle = "percentage margin of victory by 
+       Trump (red) to Clinton (blue)") +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", 
+                       breaks = c(-30, -20, -10, 0, 10, 20, 30)) +
+  theme_void() +
+  theme(legend.position = "left")
+```
+
+# Cartogram distortions
+
+```{r}
+michigan %<>% st_transform(3857)
+```
+
+```{r}
+mi_cart <- cartogram_cont(michigan, "total_votes", itermax = 4)
+```
+
+The cartogram algorithm returns back a dataset like michigan in every respect except the county line coordinates, which are now scaled according to the cartogram_cont() algorithm. 
+
+```{r}
+ggplot(mi_cart) + 
+  geom_sf(aes(fill = indicator)) + 
+  labs(title = "Michigan Counties, 2016 presidential election") +
+  scale_fill_manual(values = c("blue", "red"), 
+                    name = "popular vote winner") +
+  theme_void() +
+  theme(legend.position = "bottom")
+```
+
+# Measuring Gerrymandering
+
+```{r}
+mi_senate_2011 <- st_read("data/Michigan_State_Senate_Districts_2011_plan.geojson")
+```
+
+```{r}
+leaflet() %>% 
+  addPolygons(data = mi_senate_2011) %>% 
+  addTiles()
+```
+
+```{r}
+settransform(mi_senate_2011,
+             popup_content = paste("<strong>Name:</strong> ", NAME,
+              "<br><strong>Legislator:</strong> ", LEGISLATOR,
+              "<br><strong>Party:</strong> ", PARTY))
+```
+
+```{r}
+leaflet() %>% 
+  addPolygons(data = mi_senate_2011, popup = ~ popup_content) %>% 
+  addTiles()
+```
+
+We will calculate some gerrymandering metrics based on assessing compactness. The idea of compactness measurement is that a district shape is compared against a hypothetical compact shape, such as a circle, square or polygon. One of the most common compactness measures is the “Convex Hull”, a comparison of the shape of the district to a polygon that encloses the district. To illustrate, we start with the 29th district, which encompasses the city of Grand Rapids and areas east and southeast.
+
+```{r}
+district_29 <- fsubset(mi_senate_2011, NAME %==% 29)
+```
+
+## Convex Hull Score
+
+```{r}
+settransform(district_29, 
+             convex_hull = st_convex_hull(geometry))
+```
+
+```{r}
+leaflet() %>%
+ addPolygons(data=district_29, popup=~popup_content) %>%
+ addPolygons(data = district_29$convex_hull, color = "red", weight = 2,
+             dashArray = "5, 5", 
+             fillOpacity = 0.3, fillColor = "red") %>%
+ addTiles()
+```
+
+```{r}
+boundary_area <- st_area(district_29)
+convex_hull_area <- st_area(district_29$convex_hull)
+boundary_area / convex_hull_area
+```
+
+The result, .789, would be interpreted as the legislative district area being 79 percent of the convex hull. Based on this measure, the district is relatively compact, although any district’s compactness must be interpreted in the context of the redistricting plan and other districts. Studies of the compactness of a redistricting plan take account of multiple measures.
+
+## Polsby-Popper score
+
+The compactness measure is the area of the district divided by the area of the circle with the same circumference as the district perimeter.
+
+$$\text{Polsby-Popper compactness} = \frac{4\pi A_d}{P^2_d}$$
+
+```{r}
+district_29 %<>% fmutate(
+  boundary_area = st_area(district_29),
+  boundary_perimeter = st_length(st_boundary(district_29)),
+  radius = boundary_perimeter / (2 * pi)
+)
+
+district_29 %<>% mutate(
+  centroid = st_centroid(district_29),
+  circle = st_buffer(centroid, dist = radius)
+)
+```
+
+```{r}
+leaflet() %>%
+ addPolygons(data=district_29, popup=~popup_content) %>%
+ addPolygons(data=district_29$circle, color = "red", weight = 2, 
+             dashArray = "5, 5", 
+             fillOpacity = 0.3, fillColor = "red") %>%
+ addTiles()
+```
+
+```{r}
+settransform(district_29,
+           polsby = (4 * pi * boundary_area) / (boundary_perimeter^2))
+district_29$polsby
+```
+
+The result, 0.3102, means the area of the district is 31 percent of the area of the circle. Next we approximate this calculation with the buffer area of the circle. 
+
+```{r}
+district_29$boundary_area / st_area(district_29$circle)
+```
+
+The approximation from the buffer circle is .3067, fairly close to the calculation based on the formula.
+
+## Compactness calculations across a redistricting plan
+
+```{r}
+mi_senate_2011 <- mutate(mi_senate_2011 %>% group_by(NAME),
+  convex_hull = st_convex_hull(geometry),
+  convex_hull_area = st_area(convex_hull),
+  boundary_area = st_area(geometry),
+  hull_score = boundary_area / convex_hull_area
+)
+```
+
+```{r}
+fselect(st_drop_geometry(mi_senate_2011), NAME, LEGISLATOR, PARTY, hull_score)
+```
+
+```{r}
+hull_scores_dataset_mi_senate_2011 <- 
+  fselect(st_drop_geometry(mi_senate_2011), 
+          NAME, LEGISLATOR, PARTY, hull_score)
+```
+
+Statistics by party
+
+```{r}
+hull_scores_dataset_mi_senate_2011 %>%
+group_by(PARTY) %>%
+summarise(mean=mean(hull_score), sd = sd(hull_score))
+```
+
+On average the districts are similar in convex hull compactness. In spread, the standard deviations are similar.

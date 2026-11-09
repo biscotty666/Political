@@ -1,1 +1,4 @@
 .direnv
+.Rproj.user
+*Rproj
+.Rhistory

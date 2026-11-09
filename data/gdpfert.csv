@@ -1,0 +1,215 @@
+iso2c,country,year,NY.GDP.PCAP.KD,SP.DYN.TFRT.IN,SP.DYN.LE00.IN,iso3c,region,capital,longitude,latitude,income,lending
+AD,Andorra,2019,39413.6344732996,NA,NA,AND,Europe & Central Asia,Andorra la Vella,1.5218,42.5075,High income,Not classified
+AE,United Arab Emirates,2019,43785.4172694435,1.334,79.726,ARE,Middle East & North Africa,Abu Dhabi,54.3705,24.4764,High income,Not classified
+AF,Afghanistan,2019,584.386882896106,4.87,63.565,AFG,South Asia,Kabul,69.1761,34.5228,Low income,IDA
+AG,Antigua and Barbuda,2019,17697.2311549703,1.468,78.691,ATG,Latin America & Caribbean,Saint John's,-61.8456,17.1175,High income,IBRD
+AL,Albania,2019,4543.38652018643,1.414,79.282,ALB,Europe & Central Asia,Tirane,19.8172,41.3317,Upper middle income,IBRD
+AM,Armenia,2019,4561.96786576599,1.575,75.439,ARM,Europe & Central Asia,Yerevan,44.509,40.1596,Upper middle income,IBRD
+AO,Angola,2019,2569.69134652945,5.442,62.448,AGO,Sub-Saharan Africa,Luanda,13.242,-8.81155,Lower middle income,IBRD
+AR,Argentina,2019,12716.2242038544,1.994,77.284,ARG,Latin America & Caribbean,Buenos Aires,-58.4173,-34.6118,Upper middle income,IBRD
+AS,American Samoa,2019,13288.3565565116,NA,NA,ASM,East Asia & Pacific,Pago Pago,-170.691,-14.2846,Upper middle income,Not classified
+AT,Austria,2019,46647.0809634335,1.46,81.8951219512195,AUT,Europe & Central Asia,Vienna,16.3798,48.2201,High income,Not classified
+AU,Australia,2019,58870.0216937531,1.657,82.9,AUS,East Asia & Pacific,Canberra,149.129,-35.282,High income,Not classified
+AW,Aruba,2019,31762.7340256358,1.486,76.248,ABW,Latin America & Caribbean,Oranjestad,-70.0167,12.5167,High income,Not classified
+AZ,Azerbaijan,2019,5348.26526707105,1.81,73.102,AZE,Europe & Central Asia,Baku,49.8932,40.3834,Upper middle income,IBRD
+BA,Bosnia and Herzegovina,2019,5476.35576227301,1.368,77.241,BIH,Europe & Central Asia,Sarajevo,18.4214,43.8607,Upper middle income,IBRD
+BB,Barbados,2019,17168.1456868491,1.623,77.257,BRB,Latin America & Caribbean,Bridgetown,-59.6105,13.0935,High income,Not classified
+BD,Bangladesh,2019,1557.96529123717,2.031,72.806,BGD,South Asia,Dhaka,90.4113,23.7055,Lower middle income,IDA
+BE,Belgium,2019,43098.4847198889,1.6,81.9951219512195,BEL,Europe & Central Asia,Brussels,4.36761,50.8371,High income,Not classified
+BF,Burkina Faso,2019,716.012194964082,4.971,60.039,BFA,Sub-Saharan Africa,Ouagadougou,-1.53395,12.3605,Low income,IDA
+BG,Bulgaria,2019,8234.83966944834,1.58,75.1121951219512,BGR,Europe & Central Asia,Sofia,23.3238,42.7105,Upper middle income,IBRD
+BH,Bahrain,2019,23414.2190743533,1.857,80.019,BHR,Middle East & North Africa,Manama,50.5354,26.1921,High income,Not classified
+BI,Burundi,2019,270.137283068899,5.271,62.351,BDI,Sub-Saharan Africa,Bujumbura,29.3639,-3.3784,Low income,IDA
+BJ,Benin,2019,1153.72620998083,5.13,60.454,BEN,Sub-Saharan Africa,Porto-Novo,2.6323,6.4779,Low income,IDA
+BM,Bermuda,2019,107036.239271085,1.3,81.033,BMU,North America,Hamilton,-64.706,32.3293,High income,Not classified
+BN,Brunei Darussalam,2019,30313.6563877064,1.819,74.748,BRN,East Asia & Pacific,Bandar Seri Begawan,114.946,4.94199,High income,Not classified
+BO,Bolivia,2019,3242.94884340563,2.688,67.841,BOL,Latin America & Caribbean,La Paz,-66.1936,-13.9908,Lower middle income,IBRD
+BR,Brazil,2019,8592.22153753537,1.703,75.338,BRA,Latin America & Caribbean,Brasilia,-47.9292,-15.7801,Upper middle income,IBRD
+BS,"Bahamas, The",2019,31082.8060960243,1.398,71.205,BHS,Latin America & Caribbean,Nassau,-77.339,25.0661,High income,Not classified
+BT,Bhutan,2019,3219.64367070669,1.46,71.391,BTN,South Asia,Thimphu,89.6177,27.5768,Lower middle income,IDA
+BW,Botswana,2019,6485.45726726932,2.883,65.464,BWA,Sub-Saharan Africa,Gaborone,25.9201,-24.6544,Upper middle income,IBRD
+BY,Belarus,2019,6264.86096486176,1.382,74.2268292682927,BLR,Europe & Central Asia,Minsk,27.5766,53.9678,Upper middle income,IBRD
+BZ,Belize,2019,5907.34887238917,2.106,73.931,BLZ,Latin America & Caribbean,Belmopan,-88.7713,17.2534,Upper middle income,IBRD
+CA,Canada,2019,45109.2444855151,1.47,82.2287804878049,CAN,North America,Ottawa,-75.6919,45.4215,High income,Not classified
+CD,"Congo, Dem. Rep.",2019,494.819226947003,6.253,60.276,COD,Sub-Saharan Africa,Kinshasa,15.3222,-4.325,Low income,IDA
+CF,Central African Republic,2019,381.414045064669,6.008,55.025,CAF,Sub-Saharan Africa,Bangui,21.6407,5.63056,Low income,IDA
+CG,"Congo, Rep.",2019,1731.79987996869,4.296,62.747,COG,Sub-Saharan Africa,Brazzaville,15.2662,-4.2767,Lower middle income,Blend
+CH,Switzerland,2019,87123.6604363226,1.48,83.9048780487805,CHE,Europe & Central Asia,Bern,7.44821,46.948,High income,Not classified
+CI,Cote d'Ivoire,2019,2289.37652106313,4.538,59.319,CIV,Sub-Saharan Africa,Yamoussoukro,-4.0305,5.332,Lower middle income,IDA
+CL,Chile,2019,13765.118249803,1.545,80.326,CHL,Latin America & Caribbean,Santiago,-70.6475,-33.475,High income,IBRD
+CM,Cameroon,2019,1454.56406402385,4.623,61.584,CMR,Sub-Saharan Africa,Yaounde,11.5174,3.8721,Lower middle income,Blend
+CN,China,2019,10155.4929447833,1.496,77.968,CHN,East Asia & Pacific,Beijing,116.286,40.0495,Upper middle income,IBRD
+CO,Colombia,2019,6403.87709573135,1.765,76.752,COL,Latin America & Caribbean,Bogota,-74.082,4.60987,Upper middle income,IBRD
+CR,Costa Rica,2019,12662.4221428116,1.632,79.427,CRI,Latin America & Caribbean,San Jose,-84.0089,9.63701,Upper middle income,IBRD
+CU,Cuba,2019,8042.94852386634,1.551,77.611,CUB,Latin America & Caribbean,Havana,-82.3667,23.1333,Upper middle income,Not classified
+CV,Cabo Verde,2019,3318.93278143055,1.932,76.004,CPV,Sub-Saharan Africa,Praia,-23.5087,14.9218,Lower middle income,Blend
+CW,Curacao,2019,17796.699906511,1.6,NA,CUW,Latin America & Caribbean,Willemstad,NA,NA,High income,Not classified
+CY,Cyprus,2019,28359.919921875,1.332,81.397,CYP,Europe & Central Asia,Nicosia,33.3736,35.1676,High income,Not classified
+DE,Germany,2019,43284.6024553493,1.54,81.2926829268293,DEU,Europe & Central Asia,Berlin,13.4115,52.5235,High income,Not classified
+DJ,Djibouti,2019,2820.06286565541,2.891,63.085,DJI,Middle East & North Africa,Djibouti,43.1425,11.5806,Lower middle income,IDA
+DK,Denmark,2019,57203.0277943447,1.7,81.4512195121951,DNK,Europe & Central Asia,Copenhagen,12.5681,55.6763,High income,Not classified
+DM,Dominica,2019,7936.3048182003,1.611,73.559,DMA,Latin America & Caribbean,Roseau,-61.39,15.2976,Upper middle income,Blend
+DO,Dominican Republic,2019,8205.14240945814,2.344,73.577,DOM,Latin America & Caribbean,Santo Domingo,-69.8908,18.479,Upper middle income,IBRD
+DZ,Algeria,2019,4153.00481594021,2.988,76.474,DZA,Middle East & North Africa,Algiers,3.05097,36.7397,Upper middle income,IBRD
+EC,Ecuador,2019,5863.91056629908,2.088,77.297,ECU,Latin America & Caribbean,Quito,-78.5243,-0.229498,Upper middle income,IBRD
+EE,Estonia,2019,20269.575137379,1.66,78.6463414634147,EST,Europe & Central Asia,Tallinn,24.7586,59.4392,High income,Not classified
+EG,"Egypt, Arab Rep.",2019,3768.62751137457,3.001,71.358,EGY,Middle East & North Africa,Cairo,31.2461,30.0982,Lower middle income,IBRD
+ER,Eritrea,2019,NA,3.997,67.3,ERI,Sub-Saharan Africa,Asmara,38.9183,15.3315,Low income,IDA
+ES,Spain,2019,28087.8979203438,1.23,83.8317073170732,ESP,Europe & Central Asia,Madrid,-3.70327,40.4167,High income,Not classified
+ET,Ethiopia,2019,785.485050212771,4.323,65.838,ETH,Sub-Saharan Africa,Addis Ababa,38.7468,9.02274,Low income,IDA
+FI,Finland,2019,46135.8814242631,1.35,81.9829268292683,FIN,Europe & Central Asia,Helsinki,24.9525,60.1608,High income,Not classified
+FJ,Fiji,2019,5679.0507253517,2.519,67.893,FJI,East Asia & Pacific,Suva,178.399,-18.1149,Upper middle income,Blend
+FM,"Micronesia, Fed. Sts.",2019,2984.93012390233,2.801,71.077,FSM,East Asia & Pacific,Palikir,158.185,6.91771,Lower middle income,IDA
+FO,Faroe Islands,2019,NA,2.408,82.9463414634147,FRO,Europe & Central Asia,Torshavn,-6.91181,61.8926,High income,Not classified
+FR,France,2019,38832.0242014303,1.86,82.8268292682927,FRA,Europe & Central Asia,Paris,2.35097,48.8566,High income,Not classified
+GA,Gabon,2019,6893.32308216157,3.615,66.603,GAB,Sub-Saharan Africa,Libreville,9.45162,0.38832,Upper middle income,IBRD
+GB,United Kingdom,2019,47491.5945630059,1.63,81.4048780487805,GBR,Europe & Central Asia,London,-0.126236,51.5002,High income,Not classified
+GD,Grenada,2019,9247.90865964199,2.042,74.863,GRD,Latin America & Caribbean,Saint George's,-61.7449,12.0653,Upper middle income,Blend
+GE,Georgia,2019,4773.42330884899,2.011,73.47,GEO,Europe & Central Asia,Tbilisi,44.793,41.71,Upper middle income,IBRD
+GH,Ghana,2019,1981.63615575459,3.683,64.74,GHA,Sub-Saharan Africa,Accra,-0.20795,5.57045,Lower middle income,IDA
+GI,Gibraltar,2019,NA,1.863,82.363,GIB,Europe & Central Asia,NA,NA,NA,High income,Not classified
+GL,Greenland,2019,47908.106718779,2.08,72.0436585365854,GRL,Europe & Central Asia,Nuuk,-51.7214,64.1836,High income,Not classified
+GM,"Gambia, The",2019,668.635248433711,4.869,63.755,GMB,Sub-Saharan Africa,Banjul,-16.5885,13.4495,Low income,IDA
+GN,Guinea,2019,937.703136755322,4.576,59.72,GIN,Sub-Saharan Africa,Conakry,-13.7,9.51667,Low income,IDA
+GQ,Equatorial Guinea,2019,6472.07086074269,4.429,61.644,GNQ,Sub-Saharan Africa,Malabo,8.7741,3.7523,Upper middle income,IBRD
+GR,Greece,2019,19018.9021220823,1.34,81.6390243902439,GRC,Europe & Central Asia,Athens,23.7166,37.9792,High income,Not classified
+GT,Guatemala,2019,4263.07805308999,2.61,73.129,GTM,Latin America & Caribbean,Guatemala City,-90.5328,14.6248,Upper middle income,IBRD
+GU,Guam,2019,35378.9557673086,2.623,77.717,GUM,East Asia & Pacific,Agana,144.794,13.4443,High income,Not classified
+GW,Guinea-Bissau,2019,633.725743772769,4.172,60.882,GNB,Sub-Saharan Africa,Bissau,-15.1804,11.8037,Low income,IDA
+GY,Guyana,2019,6348.69808969246,2.44,69.124,GUY,Latin America & Caribbean,Georgetown,-58.1548,6.80461,Upper middle income,IDA
+HK,"Hong Kong SAR, China",2019,44192.3802322275,1.064,85.1804878048781,HKG,East Asia & Pacific,NA,114.109,22.3964,High income,Not classified
+HN,Honduras,2019,2446.10530994908,2.427,72.881,HND,Latin America & Caribbean,Tegucigalpa,-87.4667,15.1333,Lower middle income,IDA
+HR,Croatia,2019,14071.9114694775,1.47,78.4243902439025,HRV,Europe & Central Asia,Zagreb,15.9614,45.8069,High income,IBRD
+HT,Haiti,2019,1386.51851658061,2.919,64.255,HTI,Latin America & Caribbean,Port-au-Prince,-72.3288,18.5392,Low income,IDA
+HU,Hungary,2019,15082.6714945249,1.55,76.3195121951219,HUN,Europe & Central Asia,Budapest,19.0408,47.4984,High income,Not classified
+ID,Indonesia,2019,3892.42167262992,2.215,70.518,IDN,East Asia & Pacific,Jakarta,106.83,-6.19752,Lower middle income,IBRD
+IE,Ireland,2019,75239.3028933993,1.71,82.7024390243903,IRL,Europe & Central Asia,Dublin,-6.26749,53.3441,High income,Not classified
+IL,Israel,2019,39591.3687578516,3.01,82.8048780487805,ISR,Middle East & North Africa,NA,35.2035,31.7717,High income,Not classified
+IM,Isle of Man,2019,96856.4389416175,1.614,80.737,IMN,Europe & Central Asia,Douglas,-4.47928,54.1509,High income,Not classified
+IN,India,2019,1941.81508305731,2.109,70.91,IND,South Asia,New Delhi,77.225,28.6353,Lower middle income,IBRD
+IQ,Iraq,2019,4854.38663347607,3.604,71.576,IRQ,Middle East & North Africa,Baghdad,44.394,33.3302,Upper middle income,IBRD
+IR,"Iran, Islamic Rep.",2019,5017.11721737502,1.77,76.103,IRN,Middle East & North Africa,Tehran,51.4447,35.6878,Upper middle income,IBRD
+IS,Iceland,2019,57806.0637541946,1.74,83.1634146341463,ISL,Europe & Central Asia,Reykjavik,-21.8952,64.1353,High income,Not classified
+IT,Italy,2019,32114.2998563994,1.27,83.4975609756098,ITA,Europe & Central Asia,Rome,12.4823,41.8955,High income,Not classified
+JG,Channel Islands,2019,NA,1.441,81.39,CHI,Europe & Central Asia,NA,NA,NA,High income,Not classified
+JM,Jamaica,2019,5307.50998134429,1.37,71.767,JAM,Latin America & Caribbean,Kingston,-76.792,17.9927,Upper middle income,IBRD
+JO,Jordan,2019,3916.01694720161,2.918,76.044,JOR,Middle East & North Africa,Amman,35.9263,31.9497,Upper middle income,IBRD
+JP,Japan,2019,36081.0653118215,1.36,84.3563414634146,JPN,East Asia & Pacific,Tokyo,139.77,35.67,High income,Not classified
+KE,Kenya,2019,1653.82819354564,3.469,62.943,KEN,Sub-Saharan Africa,Nairobi,36.8126,-1.27975,Lower middle income,Blend
+KG,Kyrgyz Republic,2019,1226.82446375586,3.3,71.6,KGZ,Europe & Central Asia,Bishkek,74.6057,42.8851,Lower middle income,IDA
+KH,Cambodia,2019,1465.96953538762,2.402,70.692,KHM,East Asia & Pacific,Phnom Penh,104.874,11.5556,Lower middle income,IDA
+KI,Kiribati,2019,1424.79755536944,3.368,67.15,KIR,East Asia & Pacific,Tarawa,172.979,1.32905,Lower middle income,IDA
+KM,Comoros,2019,1381.62215537536,4.125,64.068,COM,Sub-Saharan Africa,Moroni,43.2418,-11.6986,Lower middle income,IDA
+KN,St. Kitts and Nevis,2019,22137.6454319838,1.568,71.572,KNA,Latin America & Caribbean,Basseterre,-62.7309,17.3,High income,IBRD
+KR,"Korea, Rep.",2019,31640.2146297141,0.918,83.2268292682927,KOR,East Asia & Pacific,Seoul,126.957,37.5323,High income,Not classified
+KW,Kuwait,2019,25773.4566962928,2.159,79.685,KWT,Middle East & North Africa,Kuwait City,47.9824,29.3721,High income,Not classified
+KY,Cayman Islands,2019,82139.8961138837,NA,NA,CYM,Latin America & Caribbean,George Town,-81.3857,19.3022,High income,Not classified
+KZ,Kazakhstan,2019,11402.7601135125,2.9,73.18,KAZ,Europe & Central Asia,Astana,71.4382,51.1879,Upper middle income,IBRD
+LA,Lao PDR,2019,2564.0196538036,2.571,68.138,LAO,East Asia & Pacific,Vientiane,102.177,18.5826,Lower middle income,IDA
+LB,Lebanon,2019,8066.01527008681,2.13,79.236,LBN,Middle East & North Africa,Beirut,35.5134,33.8872,Upper middle income,IBRD
+LC,St. Lucia,2019,11095.3541798074,1.424,73.445,LCA,Latin America & Caribbean,Castries,-60.9832,14,Upper middle income,Blend
+LI,Liechtenstein,2019,NA,1.48,84.1609756097561,LIE,Europe & Central Asia,Vaduz,9.52148,47.1411,High income,Not classified
+LK,Sri Lanka,2019,4458.43485391502,2.019,76.008,LKA,South Asia,Colombo,79.8528,6.92148,Upper middle income,IBRD
+LR,Liberia,2019,644.162065213927,4.257,61.104,LBR,Sub-Saharan Africa,Monrovia,-10.7957,6.30039,Low income,IDA
+LS,Lesotho,2019,1074.6225006431,3.094,54.173,LSO,Sub-Saharan Africa,Maseru,27.7167,-29.5208,Lower middle income,IDA
+LT,Lithuania,2019,17249.7184431077,1.61,76.2829268292683,LTU,Europe & Central Asia,Vilnius,25.2799,54.6896,High income,Not classified
+LU,Luxembourg,2019,106729.024882424,1.34,82.6390243902439,LUX,Europe & Central Asia,Luxembourg,6.1296,49.61,High income,Not classified
+LV,Latvia,2019,16069.8404323203,1.61,75.3878048780488,LVA,Europe & Central Asia,Riga,24.1048,56.9465,High income,Not classified
+LY,Libya,2019,9278.33794257088,2.539,72.463,LBY,Middle East & North Africa,Tripoli,13.1072,32.8578,Upper middle income,IBRD
+MA,Morocco,2019,3355.62963867188,2.382,74.27,MAR,Middle East & North Africa,Rabat,-6.8704,33.9905,Lower middle income,IBRD
+MC,Monaco,2019,191193.713657546,NA,NA,MCO,Europe & Central Asia,Monaco,7.41891,43.7325,High income,Not classified
+MD,Moldova,2019,3436.4491041805,1.78,70.935,MDA,Europe & Central Asia,Chisinau,28.8497,47.0167,Lower middle income,Blend
+ME,Montenegro,2019,7684.1498693025,1.77,76.6829268292683,MNE,Europe & Central Asia,Podgorica,19.2595,42.4602,Upper middle income,IBRD
+MF,St. Martin (French part),2019,NA,2.485,79.983,MAF,Latin America & Caribbean,Marigot,NA,NA,High income,Not classified
+MG,Madagascar,2019,478.926966738444,3.978,65.882,MDG,Sub-Saharan Africa,Antananarivo,45.7167,-20.4667,Low income,IDA
+MH,Marshall Islands,2019,4984.64720085852,2.824,64.746,MHL,East Asia & Pacific,Majuro,171.135,7.11046,Upper middle income,IDA
+MK,North Macedonia,2019,5386.20032539651,1.34,76.6024390243903,MKD,Europe & Central Asia,Skopje,21.4361,42.0024,Upper middle income,IBRD
+ML,Mali,2019,779.326622345063,6.103,59.664,MLI,Sub-Saharan Africa,Bamako,-7.50034,13.5667,Low income,IDA
+MM,Myanmar,2019,1577.80271146309,2.2,66.61,MMR,East Asia & Pacific,Naypyidaw,95.9562,21.914,Lower middle income,IDA
+MN,Mongolia,2019,4385.11160331345,2.937,71.822,MNG,East Asia & Pacific,Ulaanbaatar,106.937,47.9129,Lower middle income,Blend
+MO,"Macao SAR, China",2019,76958.8625966564,1.077,84.978,MAC,East Asia & Pacific,NA,113.55,22.1667,High income,Not classified
+MP,Northern Mariana Islands,2019,20818.1538599927,NA,NA,MNP,East Asia & Pacific,Saipan,145.765,15.1935,High income,Not classified
+MR,Mauritania,2019,1670.02712488425,4.521,65.687,MRT,Sub-Saharan Africa,Nouakchott,-15.9824,18.2367,Lower middle income,IDA
+MT,Malta,2019,28375.2709332443,1.14,82.8585365853659,MLT,Middle East & North Africa,Valletta,14.5189,35.9042,High income,Not classified
+MU,Mauritius,2019,10959.3361409219,1.4,74.2358536585366,MUS,Sub-Saharan Africa,Port Louis,57.4977,-20.1605,Upper middle income,IBRD
+MV,Maldives,2019,10753.1431705011,1.736,80.116,MDV,South Asia,Male,73.5109,4.1742,Upper middle income,IDA
+MW,Malawi,2019,396.316837841203,4.072,64.119,MWI,Sub-Saharan Africa,Lilongwe,33.7703,-13.9899,Low income,IDA
+MX,Mexico,2019,10013.7031924835,1.916,74.202,MEX,Latin America & Caribbean,Mexico City,-99.1276,19.427,Upper middle income,IBRD
+MY,Malaysia,2019,11114.5419859856,1.834,75.76,MYS,East Asia & Pacific,Kuala Lumpur,101.684,3.12433,Upper middle income,IBRD
+MZ,Mozambique,2019,600.403941051414,4.783,61.166,MOZ,Sub-Saharan Africa,Maputo,32.5713,-25.9664,Low income,IDA
+NA,Namibia,2019,4596.62707017602,3.404,63.075,NAM,Sub-Saharan Africa,Windhoek,17.0931,-22.5648,Upper middle income,IBRD
+NC,New Caledonia,2019,NA,2.1,80.4197073170732,NCL,East Asia & Pacific,Noum'ea,166.464,-22.2677,High income,Not classified
+NE,Niger,2019,520.919398398195,6.961,62.897,NER,Sub-Saharan Africa,Niamey,2.1073,13.514,Low income,IDA
+NG,Nigeria,2019,2505.46274518312,5.379,52.91,NGA,Sub-Saharan Africa,Abuja,7.48906,9.05804,Lower middle income,Blend
+NI,Nicaragua,2019,1947.40761487163,2.377,74.054,NIC,Latin America & Caribbean,Managua,-86.2734,12.1475,Lower middle income,IDA
+NL,Netherlands,2019,48443.7320540283,1.57,82.1121951219512,NLD,Europe & Central Asia,Amsterdam,4.89095,52.3738,High income,Not classified
+NO,Norway,2019,76005.224786526,1.53,82.9585365853659,NOR,Europe & Central Asia,Oslo,10.7387,59.9138,High income,Not classified
+NP,Nepal,2019,1061.48601942862,2.08,69.558,NPL,South Asia,Kathmandu,85.3157,27.6939,Low income,IDA
+NR,Nauru,2019,7387.07603185039,3.618,63.484,NRU,East Asia & Pacific,Yaren District,166.920867,-0.5477,Upper middle income,IBRD
+NZ,New Zealand,2019,40599.0315482907,1.72,82.0560975609756,NZL,East Asia & Pacific,Wellington,174.776,-41.2865,High income,Not classified
+OM,Oman,2019,18044.2704535008,2.776,78.002,OMN,Middle East & North Africa,Muscat,58.5874,23.6105,High income,Not classified
+PA,Panama,2019,15122.517274072,2.375,77.81,PAN,Latin America & Caribbean,Panama City,-79.5188,8.99427,High income,IBRD
+PE,Peru,2019,6550.52823999169,2.242,76.156,PER,Latin America & Caribbean,Lima,-77.0465,-12.0931,Upper middle income,IBRD
+PF,French Polynesia,2019,19749.4312702373,1.712,82.996,PYF,East Asia & Pacific,Papeete,-149.57,-17.535,High income,Not classified
+PG,Papua New Guinea,2019,2590.50515304414,3.322,65.474,PNG,East Asia & Pacific,Port Moresby,147.194,-9.47357,Lower middle income,Blend
+PH,Philippines,2019,3589.61679192751,2.805,71.865,PHL,East Asia & Pacific,Manila,121.035,14.5515,Lower middle income,IBRD
+PK,Pakistan,2019,1452.85157330085,3.62,66.756,PAK,South Asia,Islamabad,72.8,30.5167,Lower middle income,Blend
+PL,Poland,2019,15053.2323676784,1.44,77.9048780487805,POL,Europe & Central Asia,Warsaw,21.02,52.26,High income,IBRD
+PR,Puerto Rico,2019,30181.2724849071,0.982,79.063,PRI,Latin America & Caribbean,San Juan,-66,18.23,High income,Not classified
+PS,West Bank and Gaza,2019,3378.4346209191,3.642,75.241,PSE,Middle East & North Africa,NA,NA,NA,Lower middle income,Not classified
+PT,Portugal,2019,21617.411624379,1.43,81.6756097560976,PRT,Europe & Central Asia,Lisbon,-9.13552,38.7072,High income,Not classified
+PW,Palau,2019,15078.7089537793,NA,NA,PLW,East Asia & Pacific,Koror,134.479,7.34194,High income,IBRD
+PY,Paraguay,2019,6229.22489536642,2.525,73.621,PRY,Latin America & Caribbean,Asuncion,-57.6362,-25.3005,Upper middle income,IBRD
+QA,Qatar,2019,59672.6415484228,1.834,80.99,QAT,Middle East & North Africa,Doha,51.5082,25.2948,High income,Not classified
+RO,Romania,2019,11252.7929110931,1.77,75.6073170731707,ROU,Europe & Central Asia,Bucharest,26.0979,44.4479,Upper middle income,IBRD
+RS,Serbia,2019,6567.90956383791,1.52,75.9365853658537,SRB,Europe & Central Asia,Belgrade,20.4656,44.8024,Upper middle income,IBRD
+RU,Russian Federation,2019,9958.4609375,1.504,73.0839024390244,RUS,Europe & Central Asia,Moscow,37.6176,55.7558,Upper middle income,IBRD
+RW,Rwanda,2019,871.279521356256,3.939,66.437,RWA,Sub-Saharan Africa,Kigali,30.0587,-1.95325,Low income,IDA
+SA,Saudi Arabia,2019,18955.5463509722,2.504,77.304,SAU,Middle East & North Africa,Riyadh,46.6977,24.6748,High income,Not classified
+SB,Solomon Islands,2019,2203.98033155881,4.104,70.382,SLB,East Asia & Pacific,Honiara,159.949,-9.42676,Lower middle income,IDA
+SC,Seychelles,2019,16992.0323979001,2.36,74.0463414634146,SYC,Sub-Saharan Africa,Victoria,55.4466,-4.6309,High income,IBRD
+SD,Sudan,2019,1950.04223632813,4.617,65.876,SDN,Sub-Saharan Africa,Khartoum,32.5363,15.5932,Lower middle income,IDA
+SE,Sweden,2019,53490.3518198746,1.71,83.109756097561,SWE,Europe & Central Asia,Stockholm,18.0645,59.3327,High income,Not classified
+SG,Singapore,2019,61340.1661723862,1.14,83.5951219512195,SGP,East Asia & Pacific,Singapore,103.85,1.28941,High income,Not classified
+SI,Slovenia,2019,24125.3920363107,1.61,81.5292682926829,SVN,Europe & Central Asia,Ljubljana,14.5044,46.0546,High income,Not classified
+SK,Slovak Republic,2019,18242.4950003779,1.57,77.6658536585366,SVK,Europe & Central Asia,Bratislava,17.1073,48.1484,High income,Not classified
+SL,Sierra Leone,2019,630.896017541675,4.192,60.255,SLE,Sub-Saharan Africa,Freetown,-13.2134,8.4821,Low income,IDA
+SM,San Marino,2019,44142.8704677228,NA,NA,SMR,Europe & Central Asia,San Marino,12.4486,43.9322,High income,Not classified
+SN,Senegal,2019,1409.97081603748,4.517,68.526,SEN,Sub-Saharan Africa,Dakar,-17.4734,14.7247,Lower middle income,IDA
+SO,Somalia,2019,428.483115760689,6.531,57.078,SOM,Sub-Saharan Africa,Mogadishu,45.3254,2.07515,Low income,IDA
+SR,Suriname,2019,8756.06972901955,2.394,72.242,SUR,Latin America & Caribbean,Paramaribo,-55.1679,5.8232,Upper middle income,IBRD
+SS,South Sudan,2019,NA,4.619,55.912,SSD,Sub-Saharan Africa,Juba,31.6,4.85,Low income,IDA
+ST,Sao Tome and Principe,2019,1676.39631287316,3.964,68.523,STP,Sub-Saharan Africa,Sao Tome,6.6071,0.20618,Lower middle income,IDA
+SV,El Salvador,2019,4104.91788888425,1.838,72.559,SLV,Latin America & Caribbean,San Salvador,-89.2073,13.7034,Lower middle income,IBRD
+SX,Sint Maarten (Dutch part),2019,NA,1.601,75.437,SXM,Latin America & Caribbean,Philipsburg,NA,NA,High income,Not classified
+SY,Syrian Arab Republic,2019,781.391217414265,2.835,71.822,SYR,Middle East & North Africa,Damascus,36.3119,33.5146,Low income,IDA
+SZ,Eswatini,2019,3766.06299935158,2.921,60.549,SWZ,Sub-Saharan Africa,Mbabane,31.4659,-26.5225,Lower middle income,IBRD
+TC,Turks and Caicos Islands,2019,25438.7832890572,1.692,75.326,TCA,Latin America & Caribbean,Grand Turk,-71.141389,21.4602778,High income,Not classified
+TD,Chad,2019,652.703213763469,6.412,53.259,TCD,Sub-Saharan Africa,N'Djamena,15.0445,12.1048,Low income,IDA
+TG,Togo,2019,618.490502735404,4.385,60.901,TGO,Sub-Saharan Africa,Lome,1.2255,6.1228,Low income,IDA
+TH,Thailand,2019,6456.24199159638,1.352,78.975,THA,East Asia & Pacific,Bangkok,100.521,13.7308,Upper middle income,IBRD
+TJ,Tajikistan,2019,1172.07228695548,3.281,70.867,TJK,Europe & Central Asia,Dushanbe,68.7864,38.5878,Low income,IDA
+TL,Timor-Leste,2019,1530.81109245341,3.336,68.268,TLS,East Asia & Pacific,Dili,125.567,-8.56667,Lower middle income,Blend
+TM,Turkmenistan,2019,7422.36251776805,2.74,69.002,TKM,Europe & Central Asia,Ashgabat,58.3794,37.9509,Upper middle income,IBRD
+TN,Tunisia,2019,4090.43340194668,2.148,75.993,TUN,Middle East & North Africa,Tunis,10.21,36.7899,Lower middle income,IBRD
+TO,Tonga,2019,4628.48136062338,3.315,70.871,TON,East Asia & Pacific,Nuku'alofa,-175.216,-21.136,Upper middle income,IDA
+TT,Trinidad and Tobago,2019,15576.4345950337,1.643,74.228,TTO,Latin America & Caribbean,Port-of-Spain,-61.4789,10.6596,High income,IBRD
+TV,Tuvalu,2019,4184.09405884431,3.199,64.278,TUV,East Asia & Pacific,Funafuti,179.089567,-8.6314877,Upper middle income,IDA
+TZ,Tanzania,2019,1037.94030761719,4.864,66.989,TZA,Sub-Saharan Africa,Dodoma,35.7382,-6.17486,Low income,IDA
+UA,Ukraine,2019,2425.63452148438,1.228,71.8273170731707,UKR,Europe & Central Asia,Kiev,30.5038,50.4536,Lower middle income,IBRD
+UG,Uganda,2019,922.023177303942,4.809,62.991,UGA,Sub-Saharan Africa,Kampala,32.5729,0.314269,Low income,IDA
+US,United States,2019,60698.0112990179,1.706,78.7878048780488,USA,North America,Washington D.C.,-77.032,38.8895,High income,Not classified
+UY,Uruguay,2019,16192.1592149791,1.546,77.508,URY,Latin America & Caribbean,Montevideo,-56.0675,-34.8941,High income,IBRD
+UZ,Uzbekistan,2019,3161.4153813888,2.785,71.344,UZB,Europe & Central Asia,Tashkent,69.269,41.3052,Lower middle income,Blend
+VC,St. Vincent and the Grenadines,2019,8213.164718654,1.838,72.835,VCT,Latin America & Caribbean,Kingstown,-61.2653,13.2035,Upper middle income,Blend
+VE,"Venezuela, RB",2019,NA,2.25,72.161,VEN,Latin America & Caribbean,Caracas,-69.8371,9.08165,Upper middle income,IBRD
+VG,British Virgin Islands,2019,NA,0.948,75.863,VGB,Latin America & Caribbean,Road Town,-64.623056,18.431389,High income,Not classified
+VI,Virgin Islands (U.S.),2019,36273.0950999508,2.05,79.6682926829268,VIR,Latin America & Caribbean,Charlotte Amalie,-64.8963,18.3358,High income,Not classified
+VN,Vietnam,2019,3288.35307286665,1.948,74.093,VNM,East Asia & Pacific,Hanoi,105.825,21.0069,Lower middle income,IBRD
+VU,Vanuatu,2019,2838.98740990445,3.813,69.877,VUT,East Asia & Pacific,Port-Vila,168.321,-17.7404,Lower middle income,IDA
+WS,Samoa,2019,4421.34561483944,4.047,72.157,WSM,East Asia & Pacific,Apia,-171.752,-13.8314,Upper middle income,IDA
+XK,Kosovo,2019,4219.08069197588,1.546,79.022,XKX,Europe & Central Asia,Pristina,20.926,42.565,Upper middle income,IDA
+YE,"Yemen, Rep.",2019,NA,3.963,65.092,YEM,Middle East & North Africa,Sana'a,44.2075,15.352,Low income,IDA
+ZA,South Africa,2019,6189.28924467793,2.475,66.175,ZAF,Sub-Saharan Africa,Pretoria,28.1871,-25.746,Upper middle income,IBRD
+ZM,Zambia,2019,1310.62222427718,4.451,62.793,ZMB,Sub-Saharan Africa,Lusaka,28.2937,-15.3982,Lower middle income,IDA
+ZW,Zimbabwe,2019,1342.98958704508,3.599,61.292,ZWE,Sub-Saharan Africa,Harare,31.0672,-17.8312,Lower middle income,Blend

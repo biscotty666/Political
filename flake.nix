@@ -18,8 +18,20 @@
             texliveMedium
             ;
           inherit (pkgs.rPackages)
+            cartogram
+            codetools
+            crsuggest
             collapse
+            ggspatial
+            gt
+            kit
+            leaflet
+            microbenchmark
+            sf
+            styler
+            tidycensus
             tidyverse
+            WDI
             zeallot
             ;
         };
