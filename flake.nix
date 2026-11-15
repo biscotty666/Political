@@ -22,16 +22,25 @@
             codetools
             crsuggest
             collapse
+            dendextend
+            ggrepel
             ggspatial
             gt
             kit
             leaflet
             microbenchmark
+            quanteda
+            quanteda_textstats
+            quanteda_textplots
+            readtext
+            seededlda
             sf
+            smacof
             styler
             tidycensus
             tidyverse
             WDI
+            webshot2
             zeallot
             ;
         };
