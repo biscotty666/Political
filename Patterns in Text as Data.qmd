@@ -1,0 +1,453 @@
+---
+title: "Patterns in Text as Data"
+format: gfm
+---
+
+[source](https://whittkilburn.github.io/inpolr/ch8.html)
+
+```{r}
+options(paged.print = F, digits = 4)
+```
+
+# Text as data
+
+Two key distinctions in analyzing text as data shape how researchers approach their work. 
+
+1. patterns in “function” words
+  - pronouns, articles, and prepositions (e.g., “they,” “the,” “and,” “in”)
+  - serve as the structural glue that holds sentences together
+  - often used to explore stylistic features such as style an authorship
+2. patterns in content words
+  - carry substantive meaning
+  - include nouns, verbs, adjectives, and adverbs
+  - for thematic content or topics
+
+Researchers approach these analyses from a “bag of words” or a “strings as words” approach.
+- the order of words is disregarded
+- the occurrences of words, or co-occurrences across texts, are measured
+- In the strings as words approach, the order of words is considered to assess patterns in their arrangement
+
+The analysis within this chapter begins with The Federalist papers, applying a bag of words approach to investigate the authorship of the texts. We will
+- tokenize the documents
+- construct matrices of term frequencies and distances between papers
+- apply the multidimensional scaling analysis from Chapter 7 to uncover patterns in authorship.
+
+Then we will shift to methods for uncovering thematic content of The Federalist and next the content of a bureaucratic regulation proposal affecting the interpretation of Title IX of US civil rights law.
+
+# Organizing text as data
+
+A commonly used structure is a corpus object. A corpus preserves metadata and facilitates access to the text for processing. The text is broken into smaller units called tokens, which are usually words or phrases, but can be sentences or parts of a speech. _n-grams_ refer to the number of combined words, eg. "2_gram". The tokenized text is organized into a document features matrix, or document term matrix. Rows correspond with tokens, columns represent documents, and the cells contain frequencies.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(collapse)
+library(magrittr)
+library(readtext)
+library(quanteda)
+library(quanteda.textstats)
+library(quanteda.textplots)
+library(smacof)
+library(seededlda)
+```
+
+```{r}
+(fed_papers <- readtext("data/txt/*.txt"))
+```
+
+
+We can modify the readtext() function to include meta characteristics such as the author (or purported author) and include the characteristics when it is read, by specifying two additional arguments, docvarsfrom for the source of the metadata and docvarnames for the intended name of the metadata.
+
+```{r}
+(fed_papers <- readtext("data/txt/*.txt",
+  docvarsfrom = "filenames",
+  docvarnames = c("number", "author"), dvsep = "_"
+))
+```
+
+# Corpus, tokens, document feature matrix
+
+## Create corpus
+
+```{r}
+(corp_fed_papers <- corpus(fed_papers))
+docvars(corp_fed_papers) %>% qTBL
+```
+
+## Tokenizing a text
+
+```{r}
+(tokens_fed_papers <- tokens(corp_fed_papers))
+```
+
+By default, numbers and punctuation are included.
+
+```{r}
+(tokens_fed_papers <- tokens(corp_fed_papers,
+                             remove_numbers = T, remove_punct = T))
+```
+
+To generate n-grams of any size, use the tokens_ngrams() function piped in as an additional line.
+
+```{r}
+(tokens_fed_papers_2n <-
+  tokens(corp_fed_papers,
+    remove_numbers = T, remove_punct = T
+  ) %>%
+  tokens_ngrams(n = 2))
+```
+
+## Constructiong a document-term matrix
+
+```{r}
+(dfm_fed_papers <- dfm(tokens_fed_papers, tolower = T))
+```
+
+## Describing the DFM with token frequency
+
+`n` is the number of top terms counted.
+
+```{r}
+(freq_stats_fed_papers <- textstat_frequency(dfm_fed_papers, n = 10))
+```
+
+```{r}
+(freq_stats_fed_papers <- 
+   textstat_frequency(dfm_fed_papers, n = 10, group = author))
+```
+
+## Subsetting a dfm by function and content words
+
+The term “stop words” is another term for “function words”. The default list of function words for the English language is the output from the function stopwords(). 
+
+```{r}
+stopwords() %>% head(20)
+```
+
+```{r}
+(stop_dfm_fed <- dfm_select(dfm_fed_papers, pattern = stopwords()))
+```
+
+Out of the 175 stopwords from the list, 123 were present at least once in The Federalist papers.
+
+# Scaling function words
+
+We can input it directly into the dist() function to create a matrix of pairwise dissimilarities in word usage. The results stored in dissimat_fed is a distance matrix of the pairwise distances between documents.
+
+```{r}
+dissimat_fed <- dist(stop_dfm_fed) %>% as.matrix
+ss(dissimat_fed, 1:4, 1:4)
+```
+
+Find the scaling solution for 2 dimensions.
+
+```{r}
+nmds.results <- mds(dissimat_fed, ndim = 2)
+nmds.results$stress
+```
+
+This doesn't seem great.
+
+```{r}
+coord_fed <- qDF(nmds.results$conf)
+coord_fed %<>% fmutate(authors = row.names(coord_fed))
+head(coord_fed)
+```
+
+```{r}
+coord_fed %<>% 
+  fmutate(number = str_extract(authors, "\\d+"),
+          author = str_match(authors, "(?<=_)\\D+(?=\\.)"))
+```
+
+```{r pat-tex-dat-1}
+ggplot(coord_fed) +
+  geom_point(aes(x = D1, y = D2, color = author)) +
+  geom_text(aes(x = D1, y = D2, label = number, color = author),
+            check_overlap = T, show.legend = F, hjust = 1.3) +
+  theme(legend.position = "bottom") +
+  scale_color_viridis_d()
+```
+
+## Normalizing frequencies across different text lengths
+
+A common method of accounting for differences in text lengths is to measure token frequencies in z scores. For a document-features matrix, the standardized scores are accounted for row-wise: for each cell, subtract the row mean and divide by the row standard deviation. In place of frequency counts in a DFM, each value is expressed as a z score, indicating how many standard deviations the count is above or below the mean for each respective paper. The terms, or features, in the DFM are standardized relative to the counts within each document, removing the effect of paper-specific variability in length.
+
+Example
+
+```{r}
+temp_dfm <- as.matrix(dfm_fed_papers) %>% ss(1:5, 1:5)
+rowMeans(temp_dfm)
+```
+
+```{r}
+apply(temp_dfm, 1, sd)
+```
+
+```{r}
+(z_temp_dfm <- 
+  (temp_dfm - rowMeans(temp_dfm)) / apply(temp_dfm, 1, sd))
+```
+
+```{r}
+z_temp_dfm %<>% as.dfm()
+```
+
+# Thematic content words
+
+- word clouds
+- term frequency inverse document frequency (TFIDF)
+- topic models. 
+
+## Content word clouds
+
+```{r}
+dfm_fed_papers_nostop <- dfm_remove(dfm_fed_papers,
+                                    pattern = stopwords(source = "smart"))
+```
+
+```{r}
+#| warning: false
+textplot_wordcloud(dfm_fed_papers_nostop, min_count = 10, 
+                   rotation = .25, min_size = 0.4)
+```
+
+`rotation`: proportion of words with 90 degree rotation
+
+```{r}
+#| warning: false
+dfm_fed_papers_nostop %>% 
+  dfm_group(groups = author) %>% 
+  textplot_wordcloud(min_count = 10, comparison = TRUE, min_size = 0.25)
+```
+
+```{r}
+stopwords::stopwords_getsources()
+```
+
+```{r}
+#| eval: false
+stopwords(language = "fr", source = "stopwords-iso") %>% sort()
+```
+
+# Term Frequency Inverse Document Frequency” (TF × IDF)
+
+A more formal way to assess the subject matter of texts is to identify words (or phrases) from each paper that are unusual across papers, but common enough within one that the terms could illustrate the ‘topic’ of each document. A common measure is the “Term Frequency Inverse Document Frequency” (TF × IDF) statistic (Manning, Raghavan, and Schütze 2009). The statistic captures this intuition of identifying the distinctiveness of particular words or phrases in a text, to capture its thematic content. 
+
+Term frequency (TF) is the number of words in a text that are a given term $TF_{t,d}$. For "republican" in Fed10, TF=1. Alternatively, can be measured proportionately, which would give TF = 1/16.
+
+Inverse document frequency (IDF) discounts words that occur frequently in other documents. The IDF is the total number of documents divided by the number of documents in which the term appears. Unusual terms have higher IDF scores. In practice, the log is used. $IDF_t=\log_{10}\frac{N}{DF_t}$
+
+The TF×IDF statistic is $TF_{t,d} \times \log_{10}\frac{N}{DF_t}$.
+
+To illustrate how it works, consider three short, illustrative excerpts from the following The Federalist papers:
+
+```{r}
+Fed10 <- "If a faction consists of less than a majority 
+relief is supplied by the republican principle"  # (16 words total)
+
+Fed51 <- "In republican government the legislative authority 
+necessarily predominates" # (9 words total)
+
+Fed78 <- "The standard of good behavior for the continuance in office 
+of the judicial magistracy" # (14 words total)
+```
+
+To illustrate, we will calculate TF*IDF for three terms: (1) “republican”, (2) “judicial”, and “the”.
+
+## Automatic calculation of TF x IDF
+
+The TF for each feature can be calculated with `dfm_weight()`.
+
+```{r}
+dfm_weight(dfm_fed_papers_nostop)
+```
+
+```{r}
+dfm_weight(dfm_fed_papers_nostop, scheme = "prop")
+```
+
+The IDF term is calculated with a default base-10 with `dfm_tfidf()`. 
+
+```{r}
+dfm_tfidf(dfm_fed_papers_nostop)
+```
+
+TFxIDF is calculated by supplying `scheme_tf` and `scheme_df`.
+
+```{r}
+(tfidf_dfm_fed <- 
+   dfm_tfidf(dfm_fed_papers_nostop, scheme_tf = "prop", scheme_df = "inverse"))
+```
+
+```{r}
+topfeatures(tfidf_dfm_fed, groups = author)
+```
+
+```{r}
+mat.tfidf <- as.matrix(tfidf_dfm_fed)
+```
+
+For Federalist 10
+
+```{r}
+sort(mat.tfidf[10, ], decreasing = T) %>% head(10)
+```
+
+For Federalist 78
+
+```{r}
+sort(mat.tfidf[78, ], decreasing = T) %>% head(10)
+```
+
+## Topic models
+
+The raw frequency DFM from The Federalist Papers is dfm_fed_papers_nostop. The simplest use of the algorithm is to identify a set of topics from it. The selection of the number of topics k is essentially exploratory if not guided by theory. Here we select three topics to begin exploring the algorithm’s identification of the topics:
+
+```{r}
+fed_topics_3 <- textmodel_lda(dfm_fed_papers_nostop, k = 3)
+```
+
+The `terms()` function lists the top ten words by default:
+
+```{r}
+terms(fed_topics_3)
+```
+
+ The selection of these terms by the model illustrates an important aspect of it; unlike the TF×IDF terms per The Federalist paper, these are the terms most probable given the topic. Interpreting the meaning of the topics is, of course, subjective.
+ 
+The `topics()` function returns the most likely topic (out of the three) for each essay, as in topics(fed_topics_3). 
+
+```{r}
+head(topics(fed_topics_3))
+```
+
+The majority of The Federalist papers, including most authored by Hamilton, Madison, Jay, and the disputed papers, are assigned `topic1`, suggesting that the document encompasses a central or recurring theme across the essays. Hamilton’s essays are in a sense more diverse than the others, being assigned to all three topics. Madison’s essays are nearly all assigned to `topic1`, but a few are associated with `topic3`. Jay’s three essays are assigned to `topic1`, `topic2`, and `topic2`, respectively. The Disputed papers are mostly assigned to `topic1`, suggesting thematic similarity with many of Hamilton and Madison’s known works. Unfortunately, the distribution of the three main topics do not provide much insight into the authorship of the Disputed papers.
+ 
+Within each paper, we can inspect the proportion of the papers assigned to each topic by tabulating the “theta matrix”, which is the distribution of each topic across the papers. 
+
+```{r}
+head(fed_topics_3$theta)
+```
+
+ These topics are formed over the entire corpus of individual papers. Alternatively, can find topics within authors, grouping and applying the model to each group. We can organize topics by knpwn author to compare subject matter from named to disputed authorship.
+ 
+```{r}
+dfm_fed_grouped <-
+  dfm_group(dfm_fed_papers_nostop,
+    groups = docvars(dfm_fed_papers_nostop, "author")
+  )
+```
+ 
+Next fit the model, selecting three topics:
+
+```{r}
+fed_group_lda <- textmodel_lda(dfm_fed_grouped, k = 3)
+```
+
+```{r}
+fed_group_lda$theta
+```
+
+We would review the terms within each topic through
+
+```{r}
+terms(fed_group_lda)
+```
+ 
+The “theta matrix” shows, intriguingly, that viewed from the author, `topic3` is assigned as the majority for only the Disputed and Madison authored texts. Hamilton and Jay tend to write on a more varied subject matter across the three, as did Jay.
+
+Within the study of topic models there are additional statistics to assess results for a particular k value. (See the quanteda help files, Benoit and Stefan Müller (2024), and Silge and Robinson (2017).) A common strategy is to fit several models with a range of ‘k’ values, then compare the results based on the metrics and interpret ability. A model with too few topics risks clumping together discrete subjects of interest, while a model with too many topics risks splitting coherent topics into repetitively incoherent smaller topics (Ignatow and Mihalcea 2017).
+
+# Corpus themes
+
+## Comments on a proposed Title IX Rule
+
+We will review one additional application of topic models. On April 13, 2023, the US Department of Education published a proposed rule in the Federal Register , titled “Nondiscrimination on the Basis of Sex in Education Programs or Activities Receiving Federal Financial Assistance: Sex-Related Eligibility Criteria for Male and Female Athletic Teams”22. The proposed regulation addressed how the department planned to interpret the application of Title IX of the United States Code. Specifically, the proposed rule stated that any school district’s outright, categorical ban against transgender athlete participation would be interpreted as a violation of the Title IX non-discrimination clause (Mervosh, Tumin, and Sasani 2023). The proposed rule generated over 130,000 comments from the public. We will analyze a simple random sample of 1,000 separate comments, to use text as data tools for getting a sense of what the comments are about and written in support or opposition to the proposed rule. Rather than being organized as text documents, the comments are stored within a CSV file:
+
+```{r}
+reg_comments_samples <- data.table::fread("data/reg_comments_sampled.csv")
+```
+
+The comments field contains the full text of the submitted comment. 
+
+```{r}
+head(reg_comments_samples, n = 1)
+```
+
+```{r}
+comments_sampled_corp <- 
+  corpus(reg_comments_samples$comment, docvars = reg_comments_samples$id)
+comments_sampled_tok <- 
+  tokens(comments_sampled_corp,
+         remove_punct = T, remove_numbers = T)
+```
+
+The set of tokenized comments are stored in comments_sampled_tok. The first comment, for example:
+
+```{r}
+comments_sampled_tok[1]
+```
+
+For getting a sense of the subject matter of the comments, the idea of “keywords in context” is useful. The kwic() function will search for particular key terms in a tokens object and return matches, along with the contextual words within which the key term appears. 
+
+```{r}
+kw_support <- kwic(comments_sampled_tok, pattern = "support")
+tail(kw_support)
+
+```
+
+The results show the key term surrounded by the five words before and after each occurrence. (To display fewer words, add the argument window = 3 to change the window to three words, for example.) The results provide a sense of how the comments could be further studied to observe the proportions supporting or opposing the proposed rule. Each line includes the comment text row (e.g., [text950, 8]) and the position of the word in the comment (e.g., the eighth word). 
+
+```{r}
+kw_support_phrase <- kwic(
+  comments_sampled_tok, 
+  pattern="I support the Department of Education")
+tail(kw_support)
+```
+
+```{r}
+kw_support$docname
+```
+
+Since there are 1000 total comments, the proportion of comments from kw_support is
+
+```{r}
+length(kw_support$docname) / 1000
+```
+
+Or about 12 percent of the submitted comments appear to be verbatim form letters in support of the proposed rule.
+
+To create a topic model, we use the tokens as input for dfm()
+
+```{r}
+dfm_comments_sampled <- dfm(comments_sampled_tok, tolower = T)
+dfm_comments_nostop <- 
+  dfm_remove(dfm_comments_sampled,
+             c(stopwords(), "proposed", "rule", "title", 
+               "ix", "department", "education"))
+```
+
+```{r}
+(comments_lda <- textmodel_lda(dfm_comments_nostop, k = 4))
+```
+
+```{r}
+terms(comments_lda)
+```
+
+These results seem to be unstable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
