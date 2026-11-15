@@ -1,0 +1,456 @@
+chamber,icpsr,district_code,state_abbrev,party_code,bioname,born,nominate_dim1,nominate_dim2
+House,20301,3,AL,Republican,"ROGERS, Mike Dennis",1958,0.363,0.455
+House,21102,7,AL,Democratic,"SEWELL, Terri",1965,-0.396,0.398
+House,21193,5,AL,Republican,"BROOKS, Mo",1954,0.652,-0.417
+House,21500,6,AL,Republican,"PALMER, Gary James",1954,0.678,0.096
+House,22108,1,AL,Republican,"CARL, Jerry L.",1958,0.52,0.394
+House,22140,2,AL,Republican,"MOORE, Barry",1966,0.642,-0.136
+House,29701,4,AL,Republican,"ADERHOLT, Robert",1965,0.386,0.561
+House,14066,1,AK,Republican,"YOUNG, Donald Edwin",1933,0.283,0.022
+House,22168,1,AK,Democratic,"PELTOLA, Mary Sattler",1973,-0.156,0.381
+House,21995,0,AS,Republican,"RADEWAGEN, Aumua Amata Coleman",1947,0.336,0.267
+House,20305,3,AZ,Democratic,"GRIJALVA, Raúl M.",1948,-0.598,-0.256
+House,20902,2,AZ,Democratic,"KIRKPATRICK, Ann",1950,-0.169,-0.01
+House,21103,4,AZ,Republican,"GOSAR, Paul",1958,0.699,-0.486
+House,21105,6,AZ,Republican,"SCHWEIKERT, David",1962,0.571,-0.281
+House,21502,7,AZ,Democratic,"GALLEGO, Ruben",1979,-0.436,0.064
+House,21705,5,AZ,Republican,"BIGGS, Andrew S.",1958,0.833,-0.553
+House,21739,1,AZ,Democratic,"O'HALLERAN, Thomas C.",1946,-0.198,0.18
+House,21757,8,AZ,Republican,"LESKO, Debbie",1958,0.617,-0.086
+House,21968,9,AZ,Democratic,"STANTON, Greg",1970,-0.284,0.231
+House,21106,1,AR,Republican,"CRAWFORD, Rick",1966,0.445,0.409
+House,21108,3,AR,Republican,"WOMACK, Steve",1957,0.352,0.582
+House,21503,2,AR,Republican,"HILL, French",1956,0.433,0.289
+House,21563,4,AR,Republican,"WESTERMAN, Bruce Eugene",1967,0.544,0.363
+House,15448,12,CA,Democratic,"PELOSI, Nancy",1940,-0.49,-0.202
+House,20104,28,CA,Democratic,"SCHIFF, Adam",1960,-0.35,-0.134
+House,20107,50,CA,Republican,"ISSA, Darrell",1953,0.49,-0.021
+House,20307,22,CA,Republican,"NUNES, Devin",1973,0.45,0.223
+House,20310,38,CA,Democratic,"SÁNCHEZ, Linda T.",1969,-0.508,-0.139
+House,20501,16,CA,Democratic,"COSTA, Jim",1952,-0.195,0.457
+House,20538,6,CA,Democratic,"MATSUI, Doris",1944,-0.435,-0.152
+House,20702,9,CA,Democratic,"McNERNEY, Jerry",1951,-0.263,-0.159
+House,20703,23,CA,Republican,"MCCARTHY, Kevin",1965,0.456,0.222
+House,20762,14,CA,Democratic,"SPEIER, Karen Lorraine Jacqueline (Jackie)",1950,-0.381,-0.41
+House,20903,4,CA,Republican,"McCLINTOCK, Tom",1956,0.687,-0.399
+House,20955,27,CA,Democratic,"CHU, Judy",1953,-0.488,-0.374
+House,20958,3,CA,Democratic,"GARAMENDI, John",1945,-0.309,-0.095
+House,21110,37,CA,Democratic,"BASS, Karen",1953,-0.584,-0.098
+House,21302,1,CA,Republican,"LaMALFA, Doug",1960,0.534,0.04
+House,21303,2,CA,Democratic,"HUFFMAN, Jared",1964,-0.43,-0.558
+House,21304,7,CA,Democratic,"BERA, Ami",1965,-0.238,0.013
+House,21306,15,CA,Democratic,"SWALWELL, Eric",1980,-0.362,-0.083
+House,21307,21,CA,Republican,"VALADAO, David G.",1977,0.267,0.386
+House,21308,26,CA,Democratic,"BROWNLEY, Julia",1952,-0.291,0.049
+House,21309,29,CA,Democratic,"CÁRDENAS, Tony",1963,-0.39,0.005
+House,21311,36,CA,Democratic,"RUIZ, Raul",1972,-0.249,0.05
+House,21312,41,CA,Democratic,"TAKANO, Mark",1960,-0.464,-0.273
+House,21313,47,CA,Democratic,"LOWENTHAL, Alan",1941,-0.449,-0.384
+House,21314,51,CA,Democratic,"VARGAS, Juan",1961,-0.403,0.06
+House,21315,52,CA,Democratic,"PETERS, Scott",1958,-0.186,-0.032
+House,21504,11,CA,Democratic,"DESAULNIER, Mark James",1952,-0.525,-0.366
+House,21506,31,CA,Democratic,"AGUILAR, Peter Rey",1979,-0.303,0.133
+House,21507,33,CA,Democratic,"LIEU, Ted",1969,-0.378,-0.244
+House,21508,35,CA,Democratic,"TORRES, Norma Judith",1965,-0.364,0.043
+House,21703,44,CA,Democratic,"BARRAGÁN, Nanette Diaz",1976,-0.515,-0.054
+House,21709,24,CA,Democratic,"CARBAJAL, Salud",1964,-0.303,0.1
+House,21711,46,CA,Democratic,"CORREA, Jose Luis",1958,-0.284,0.238
+House,21728,17,CA,Democratic,"KHANNA, Rohit",1976,-0.513,-0.239
+House,21740,20,CA,Democratic,"PANETTA, James Varni",1969,-0.288,0.131
+House,21754,34,CA,Democratic,"GOMEZ, Jimmy",1974,-0.564,-0.296
+House,21930,10,CA,Democratic,"HARDER, Josh",1986,-0.36,0.603
+House,21939,49,CA,Democratic,"LEVIN, Mike",1978,-0.352,0.161
+House,21954,45,CA,Democratic,"PORTER, Katie",1974,-0.208,-0.291
+House,21988,25,CA,Republican,"GARCIA, Mike",1976,0.377,0.072
+House,22126,53,CA,Democratic,"JACOBS, Sara",1989,-0.353,-0.465
+House,22129,39,CA,Republican,"KIM, Young",1962,0.279,0.242
+House,22145,8,CA,Republican,"OBERNOLTE, Jay",1970,0.34,0.108
+House,22152,48,CA,Republican,"STEEL, Michelle",1955,0.355,0.371
+House,22164,22,CA,Republican,"CONWAY, Connie",1950,0.376,0.295
+House,29106,43,CA,Democratic,"WATERS, Maxine",1938,-0.656,-0.075
+House,29312,18,CA,Democratic,"ESHOO, Anna Georges",1942,-0.38,-0.404
+House,29317,40,CA,Democratic,"ROYBAL-ALLARD, Lucille",1941,-0.469,-0.171
+House,29323,42,CA,Republican,"CALVERT, Ken",1953,0.349,0.232
+House,29504,19,CA,Democratic,"LOFGREN, Zoe",1947,-0.4,-0.428
+House,29707,30,CA,Democratic,"SHERMAN, Brad",1954,-0.344,-0.144
+House,29778,13,CA,Democratic,"LEE, Barbara",1946,-0.677,-0.572
+House,29901,5,CA,Democratic,"THOMPSON, Michael",1951,-0.393,0.069
+House,29903,32,CA,Democratic,"NAPOLITANO, Grace Flores",1936,-0.448,-0.246
+House,20704,5,CO,Republican,"LAMBORN, Doug",1954,0.666,0.238
+House,20705,7,CO,Democratic,"PERLMUTTER, Ed",1953,-0.282,0.072
+House,21510,4,CO,Republican,"BUCK, Kenneth Robert",1959,0.711,-0.436
+House,21912,6,CO,Democratic,"CROW, Jason",1979,-0.301,0.23
+House,21948,2,CO,Democratic,"NEGUSE, Joseph",1984,-0.391,-0.257
+House,22103,3,CO,Republican,"BOEBERT, Lauren",1986,0.758,-0.535
+House,29710,1,CO,Democratic,"DeGETTE, Diana",1957,-0.431,-0.305
+House,20706,2,CT,Democratic,"COURTNEY, Joe",1953,-0.342,0.024
+House,20907,4,CT,Democratic,"HIMES, James A.",1966,-0.239,-0.229
+House,21931,5,CT,Democratic,"HAYES, Jahana",1973,-0.374,-0.072
+House,29109,3,CT,Democratic,"DeLAURO, Rosa L.",1943,-0.414,-0.115
+House,29908,1,CT,Democratic,"LARSON, John B.",1948,-0.396,-0.048
+House,21706,1,DE,Democratic,"BLUNT ROCHESTER, Lisa",1962,-0.338,-0.161
+House,21993,0,DC,Democratic,"NORTON, Eleanor Holmes",1937,-0.496,-0.026
+House,20316,25,FL,Republican,"DIAZ-BALART, Mario",1961,0.286,0.129
+House,20504,23,FL,Democratic,"WASSERMAN SCHULTZ, Debbie",1966,-0.418,0.081
+House,20708,14,FL,Democratic,"CASTOR, Kathy",1966,-0.438,0.054
+House,20709,16,FL,Republican,"BUCHANAN, Vernon G.",1951,0.362,-0.103
+House,20758,12,FL,Republican,"BILIRAKIS, Gus",1963,0.41,0.009
+House,20909,8,FL,Republican,"POSEY, Bill",1947,0.527,-0.349
+House,20959,22,FL,Democratic,"DEUTCH, Theodore E. (Ted)",1966,-0.401,-0.078
+House,21116,11,FL,Republican,"WEBSTER, Daniel A.",1949,0.527,-0.098
+House,21118,24,FL,Democratic,"WILSON, Frederica",1942,-0.48,-0.011
+House,21321,21,FL,Democratic,"FRANKEL, Lois",1948,-0.402,-0.064
+House,21712,13,FL,Democratic,"CRIST, Charlie Joseph Jr.",1956,-0.227,0.079
+House,21713,10,FL,Democratic,"DEMINGS, Valdez Butler",1957,-0.322,-0.006
+House,21714,2,FL,Republican,"DUNN, Neal Patrick",1953,0.504,0.388
+House,21719,1,FL,Republican,"GAETZ, Matthew L. II",1982,0.599,-0.645
+House,21732,5,FL,Democratic,"LAWSON, Alfred Jr.",1948,-0.26,0.076
+House,21735,18,FL,Republican,"MAST, Brian Jeffery",1980,0.462,-0.369
+House,21738,7,FL,Democratic,"MURPHY, Stephanie",1978,-0.161,0.123
+House,21744,4,FL,Republican,"RUTHERFORD, John Henry",1952,0.434,0.044
+House,21746,9,FL,Democratic,"SOTO, Darren Michael",1978,-0.368,0.161
+House,21971,17,FL,Republican,"STEUBE, William",1978,0.688,-0.277
+House,21981,6,FL,Republican,"WALTZ, Michael",1974,0.423,-0.074
+House,22107,3,FL,Republican,"CAMMACK, Kat",1988,0.586,-0.22
+House,22111,19,FL,Republican,"DONALDS, Byron",1978,0.645,-0.183
+House,22116,15,FL,Republican,"FRANKLIN, C. Scott",1964,0.597,0.087
+House,22118,26,FL,Republican,"GIMENEZ, Carlos A.",1954,0.316,0.134
+House,22150,27,FL,Republican,"SALAZAR, Maria Elvira",1961,0.274,0.103
+House,22163,20,FL,Democratic,"CHERFILUS-MCCORMICK, Sheila",1979,-0.619,0.341
+House,29337,20,FL,Democratic,"HASTINGS, Alcee Lamar",1936,-0.564,0.157
+House,20321,13,GA,Democratic,"SCOTT, David",1945,-0.304,0.165
+House,20712,4,GA,Democratic,"JOHNSON, Hank",1954,-0.47,-0.01
+House,21123,8,GA,Republican,"SCOTT, Austin",1969,0.558,0.238
+House,21513,1,GA,Republican,"CARTER, Buddy",1957,0.554,0.334
+House,21514,10,GA,Republican,"HICE, Jody Brownlow",1960,0.797,-0.242
+House,21515,11,GA,Republican,"LOUDERMILK, Barry D.",1963,0.683,-0.016
+House,21516,12,GA,Republican,"ALLEN, Rick W.",1951,0.696,0.243
+House,21717,3,GA,Republican,"FERGUSON, Anderson Drew IV",1966,0.602,0.156
+House,21944,6,GA,Democratic,"McBATH, Lucy",1960,-0.3,0.251
+House,22104,7,GA,Democratic,"BOURDEAUX, Carolyn",1970,-0.303,0.463
+House,22110,9,GA,Republican,"CLYDE, Andrew S.",1963,0.823,-0.084
+House,22121,14,GA,Republican,"GREENE, Marjorie Taylor",1974,0.8,-0.6
+House,22156,5,GA,Democratic,"WILLIAMS, Nikema",1978,-0.438,-0.361
+House,29339,2,GA,Democratic,"BISHOP, Sanford Dixon, Jr.",1947,-0.284,0.455
+House,21997,0,GU,Democratic,"SAN NICOLAS, Michael",1981,-0.41,-0.52
+House,20322,1,HI,Democratic,"CASE, Ed",1952,-0.196,-0.085
+House,22128,2,HI,Democratic,"KAHELE, Kaialiʻi",1974,-0.353,0.052
+House,21920,1,ID,Republican,"FULCHER, Russell",1962,0.641,-0.02
+House,29910,2,ID,Republican,"SIMPSON, Michael K.",1950,0.301,0.29
+House,20749,11,IL,Democratic,"FOSTER, Bill",1955,-0.232,-0.214
+House,20954,5,IL,Democratic,"QUIGLEY, Mike",1958,-0.323,-0.261
+House,21128,16,IL,Republican,"KINZINGER, Adam",1978,0.234,0.382
+House,21326,10,IL,Democratic,"SCHNEIDER, Brad",1961,-0.185,-0.15
+House,21328,13,IL,Republican,"DAVIS, Rodney",1970,0.279,0.17
+House,21329,17,IL,Democratic,"BUSTOS, Cheri",1961,-0.239,0.054
+House,21371,2,IL,Democratic,"KELLY, Robin L.",1956,-0.465,-0.016
+House,21519,12,IL,Republican,"BOST, Mike",1960,0.316,0.305
+House,21562,18,IL,Republican,"LaHOOD, Darin",1968,0.458,0.229
+House,21730,8,IL,Democratic,"KRISHNAMOORTHI, S. Raja",1973,-0.319,-0.038
+House,21906,6,IL,Democratic,"CASTEN, Sean",1971,-0.672,0.577
+House,21921,4,IL,Democratic,"GARCÍA, Jesús",1956,-0.448,-0.887
+House,21979,14,IL,Democratic,"UNDERWOOD, Lauren",1986,-0.555,0.478
+House,22138,15,IL,Republican,"MILLER, Mary E.",1959,0.806,-0.215
+House,22144,3,IL,Democratic,"NEWMAN, Marie",1964,-0.588,-0.303
+House,29346,1,IL,Democratic,"RUSH, Bobby L.",1946,-0.479,-0.203
+House,29717,7,IL,Democratic,"DAVIS, Danny K.",1941,-0.486,-0.263
+House,29911,9,IL,Democratic,"SCHAKOWSKY, Janice D.",1944,-0.603,-0.272
+House,20757,7,IN,Democratic,"CARSON, André",1974,-0.428,0.049
+House,21132,8,IN,Republican,"BUCSHON, Larry",1962,0.408,0.269
+House,21330,2,IN,Republican,"WALORSKI, Jackie",1963,0.436,0.315
+House,21702,3,IN,Republican,"BANKS, James E.",1979,0.648,0.017
+House,21725,9,IN,Republican,"HOLLINGSWORTH, Joseph Albert III",1983,0.417,-0.243
+House,21903,4,IN,Republican,"BAIRD, James",1945,0.477,0.36
+House,21952,6,IN,Republican,"PENCE, Gregory",1956,0.541,0.036
+House,22142,1,IN,Democratic,"MRVAN, Frank J.",1969,-0.31,0.286
+House,22151,5,IN,Republican,"SPARTZ, Victoria",1978,0.451,-0.145
+House,22171,2,IN,Republican,"YAKYM, Rudy, III",1984,0.416,0.433
+House,21902,3,IA,Democratic,"AXNE, Cynthia",1965,-0.25,0.528
+House,22113,4,IA,Republican,"FEENSTRA, Randy",1969,0.436,0.352
+House,22124,1,IA,Republican,"HINSON, Ashley",1983,0.37,0.139
+House,22139,2,IA,Republican,"MILLER-MEEKS, Mariannette",1955,0.307,0.295
+House,21750,4,KS,Republican,"ESTES, Ron",1956,0.642,0.049
+House,21914,3,KS,Democratic,"DAVIDS, Sharice",1980,-0.26,0.244
+House,22130,2,KS,Republican,"LATURNER, Jake",1988,0.487,0.394
+House,22134,1,KS,Republican,"MANN, Tracey",1976,0.65,0.141
+House,14854,5,KY,Republican,"ROGERS, Harold Dallas (Hal)",1937,0.339,0.124
+House,20723,3,KY,Democratic,"YARMUTH, John",1947,-0.378,-0.275
+House,20916,2,KY,Republican,"GUTHRIE, Brett",1964,0.418,0.296
+House,21333,6,KY,Republican,"BARR, Garland H. (Andy) IV",1973,0.476,0.34
+House,21565,1,KY,Republican,"COMER, James",1972,0.59,-0.024
+House,31102,4,KY,Republican,"MASSIE, Thomas",1971,0.678,-0.735
+House,20759,1,LA,Republican,"SCALISE, Steve",1965,0.555,0.169
+House,21137,2,LA,Democratic,"RICHMOND, Cedric",1973,-0.486,0.332
+House,21523,6,LA,Republican,"GRAVES, Garret",1972,0.426,0.045
+House,21724,3,LA,Republican,"HIGGINS, Clay",1961,0.626,-0.31
+House,21727,4,LA,Republican,"JOHNSON, Mike",1972,0.563,0.011
+House,22157,5,LA,Republican,"LETLOW, Julia",1981,0.414,0.519
+House,22158,2,LA,Democratic,"CARTER, Troy",1963,-0.494,0.228
+House,20920,1,ME,Democratic,"PINGREE, Chellie",1955,-0.42,-0.369
+House,21923,2,ME,Democratic,"GOLDEN, Jared",1982,-0.114,0.374
+House,14873,5,MD,Democratic,"HOYER, Steny Hamilton",1939,-0.381,0.119
+House,15433,7,MD,Democratic,"MFUME, Kweisi",1948,-0.444,-0.383
+House,20329,2,MD,Democratic,"RUPPERSBERGER, C. A. (Dutch)",1946,-0.296,0.129
+House,20724,3,MD,Democratic,"SARBANES, John",1962,-0.467,-0.071
+House,21139,1,MD,Republican,"HARRIS, Andy",1957,0.673,-0.396
+House,21707,4,MD,Democratic,"BROWN, Anthony Gregory",1961,-0.344,-0.063
+House,21741,8,MD,Democratic,"RASKIN, Jamie Ben",1962,-0.532,-0.249
+House,21978,6,MD,Democratic,"TRONE, David",1955,-0.305,0.176
+House,15616,1,MA,Democratic,"NEAL, Richard Edmund",1949,-0.417,-0.108
+House,20119,8,MA,Democratic,"LYNCH, Stephen F.",1955,-0.349,0.037
+House,21140,9,MA,Democratic,"KEATING, William R.",1952,-0.332,-0.116
+House,21375,5,MA,Democratic,"CLARK, Katherine M.",1963,-0.482,-0.333
+House,21525,6,MA,Democratic,"MOULTON, Seth",1978,-0.278,-0.046
+House,21955,7,MA,Democratic,"PRESSLEY, Ayanna",1974,-0.342,-0.927
+House,21977,3,MA,Democratic,"TRAHAN, Lori",1973,-0.421,-0.166
+House,22100,4,MA,Democratic,"AUCHINCLOSS, Jake",1988,-0.304,-0.425
+House,29729,2,MA,Democratic,"McGOVERN, James P.",1959,-0.538,-0.318
+House,15446,6,MI,Republican,"UPTON, Frederick Stephen",1953,0.32,-0.355
+House,20725,7,MI,Republican,"WALBERG, Tim",1951,0.508,0.116
+House,21142,2,MI,Republican,"HUIZENGA, Bill",1969,0.55,0.002
+House,21372,5,MI,Democratic,"KILDEE, Dan",1958,-0.374,-0.173
+House,21526,4,MI,Republican,"MOOLENAAR, John",1961,0.45,0.186
+House,21529,12,MI,Democratic,"DINGELL, Debbie",1953,-0.403,-0.149
+House,21530,14,MI,Democratic,"LAWRENCE, Brenda L",1954,-0.448,-0.039
+House,21704,1,MI,Republican,"BERGMAN, John",1947,0.426,0.121
+House,21940,9,MI,Democratic,"LEVIN, Andy",1960,-0.474,-0.563
+House,21965,8,MI,Democratic,"SLOTKIN, Elissa",1976,-0.316,0.743
+House,21972,11,MI,Democratic,"STEVENS, Haley",1983,-0.384,0.284
+House,21975,13,MI,Democratic,"TLAIB, Rashida",1976,-0.273,-0.962
+House,22136,10,MI,Republican,"MCCLAIN, Lisa C.",1966,0.556,0.122
+House,22137,3,MI,Republican,"MEIJER, Peter",1988,0.245,0.213
+House,20122,4,MN,Democratic,"McCOLLUM, Betty",1954,-0.417,-0.187
+House,21531,6,MN,Republican,"EMMER, Thomas Earl II",1961,0.457,-0.07
+House,21910,2,MN,Democratic,"CRAIG, Angela",1972,-0.272,0.659
+House,21929,1,MN,Republican,"HAGEDORN, Jim",1962,0.477,0.345
+House,21950,5,MN,Democratic,"OMAR, Ilhan",1982,-0.29,-0.957
+House,21953,3,MN,Democratic,"PHILLIPS, Dean",1969,-0.279,0.185
+House,21969,8,MN,Republican,"STAUBER, Peter",1966,0.355,-0.027
+House,22114,7,MN,Republican,"FISCHBACH, Michelle",1965,0.524,0.139
+House,22167,1,MN,Republican,"FINSTAD, Brad",1976,0.555,0.152
+House,21148,4,MS,Republican,"PALAZZO, Steven",1970,0.535,0.45
+House,21561,1,MS,Republican,"KELLY, Trent",1966,0.634,0.287
+House,21927,3,MS,Republican,"GUEST, Michael",1970,0.53,0.106
+House,29368,2,MS,Democratic,"THOMPSON, Bennie",1948,-0.517,0.395
+House,20124,6,MO,Republican,"GRAVES, Samuel",1963,0.438,0.204
+House,20517,5,MO,Democratic,"CLEAVER, Emanuel, II",1944,-0.453,0.016
+House,20926,3,MO,Republican,"LUETKEMEYER, Blaine",1952,0.444,0.266
+House,21149,4,MO,Republican,"HARTZLER, Vicky",1960,0.478,0.229
+House,21150,7,MO,Republican,"LONG, Billy",1955,0.544,0.244
+House,21337,2,MO,Republican,"WAGNER, Ann",1962,0.416,0.189
+House,21373,8,MO,Republican,"SMITH, Jason",1980,0.581,0.26
+House,22106,1,MO,Democratic,"BUSH, Cori",1976,-0.247,-0.969
+House,22148,1,MT,Republican,"ROSENDALE, Matthew M., Sr.",1960,0.752,-0.592
+House,20518,1,NE,Republican,"FORTENBERRY, Jeff",1960,0.304,-0.061
+House,20729,3,NE,Republican,"SMITH, Adrian",1970,0.515,0.226
+House,21701,2,NE,Republican,"BACON, Donald J.",1963,0.332,0.011
+House,22166,1,NE,Republican,"FLOOD, Mike",1975,0.509,0.763
+House,20927,1,NV,Democratic,"TITUS, Alice (Dina)",1950,-0.301,-0.201
+House,21196,2,NV,Republican,"AMODEI, Mark E.",1958,0.384,0.201
+House,21339,4,NV,Democratic,"HORSFORD, Steven",1973,-0.347,0.124
+House,21938,3,NV,Democratic,"LEE, Susie",1966,-0.23,0.287
+House,21340,2,NH,Democratic,"KUSTER, Ann McLane",1956,-0.26,-0.101
+House,21951,1,NH,Democratic,"PAPPAS, Chris",1980,-0.246,0.358
+House,14863,4,NJ,Republican,"SMITH, Christopher Henry",1953,0.173,-0.163
+House,15454,6,NJ,Democratic,"PALLONE, Frank, Jr.",1951,-0.405,-0.173
+House,20542,8,NJ,Democratic,"SIRES, Albio",1951,-0.404,0.098
+House,21536,1,NJ,Democratic,"NORCROSS, Donald",1958,-0.422,0.324
+House,21538,12,NJ,Democratic,"WATSON COLEMAN, Bonnie",1945,-0.61,-0.172
+House,21723,5,NJ,Democratic,"GOTTHEIMER, Josh S.",1975,-0.155,0.218
+House,21937,3,NJ,Democratic,"KIM, Andy",1982,-0.328,0.268
+House,21942,7,NJ,Democratic,"MALINOWSKI, Tomaz",1965,-0.272,0.121
+House,21964,11,NJ,Democratic,"SHERRILL, Mikie",1972,-0.219,0.258
+House,29741,9,NJ,Democratic,"PASCRELL, William J., Jr.",1937,-0.368,-0.008
+House,31103,10,NJ,Democratic,"PAYNE, Donald, Jr.",1958,-0.521,-0.102
+House,91980,2,NJ,Republican,"VAN DREW, Jefferson",1953,0.369,-0.488
+House,21928,1,NM,Democratic,"HAALAND, Debra",1960,-0.332,-0.233
+House,22123,2,NM,Republican,"HERRELL, Yvette",1964,0.936,0.352
+House,22131,3,NM,Democratic,"LEGER FERNANDEZ, Teresa",1959,-0.341,-0.125
+House,22159,1,NM,Democratic,"STANSBURY, Melanie Ann",1979,-0.438,-0.256
+House,20519,26,NY,Democratic,"HIGGINS, Brian",1959,-0.348,-0.034
+House,20733,9,NY,Democratic,"CLARKE, Yvette Diane",1964,-0.61,-0.233
+House,20934,20,NY,Democratic,"TONKO, Paul",1949,-0.418,-0.26
+House,21101,23,NY,Republican,"REED, Thomas W. II",1971,0.269,0.12
+House,21342,6,NY,Democratic,"MENG, Grace",1975,-0.379,-0.222
+House,21343,8,NY,Democratic,"JEFFRIES, Hakeem",1970,-0.489,-0.088
+House,21344,18,NY,Democratic,"MALONEY, Sean Patrick",1966,-0.239,0.114
+House,21539,1,NY,Republican,"ZELDIN, Lee M",1980,0.397,-0.129
+House,21540,4,NY,Democratic,"RICE, Kathleen Maura",1965,-0.28,0.039
+House,21541,21,NY,Republican,"STEFANIK, Elise M",1984,0.269,-0.035
+House,21542,24,NY,Republican,"KATKO, John",1962,0.185,0.013
+House,21715,13,NY,Democratic,"ESPAILLAT, Adriano J.",1954,-0.606,-0.239
+House,21747,3,NY,Democratic,"SUOZZI, Thomas",1962,-0.219,0.087
+House,21749,22,NY,Republican,"TENNEY, Claudia",1961,0.453,0.036
+House,21761,25,NY,Democratic,"MORELLE, Joseph D.",1957,-0.337,0.141
+House,21916,19,NY,Democratic,"DELGADO, Antonio",1977,-0.233,0.277
+House,21949,14,NY,Democratic,"OCASIO-CORTEZ, Alexandria",1989,-0.28,-0.96
+House,21990,27,NY,Republican,"JACOBS, Chris",1966,0.306,0.049
+House,22105,16,NY,Democratic,"BOWMAN, Jamaal",1976,-0.321,-0.947
+House,22117,2,NY,Republican,"GARBARINO, Andrew R.",1984,0.274,0.089
+House,22127,17,NY,Democratic,"JONES, Mondaire",1987,-0.414,-0.533
+House,22133,11,NY,Republican,"MALLIOTAKIS, Nicole",1980,0.304,0.045
+House,22154,15,NY,Democratic,"TORRES, Ritchie",1988,-0.393,-0.327
+House,22169,19,NY,Democratic,"RYAN, Patrick",1982,-0.206,0.187
+House,22170,23,NY,Republican,"SEMPOLINSKI, Joseph",1983,0.545,0.047
+House,29377,10,NY,Democratic,"NADLER, Jerrold Lewis",1947,-0.508,-0.496
+House,29378,7,NY,Democratic,"VELÁZQUEZ, Nydia M.",1953,-0.547,-0.345
+House,29379,12,NY,Democratic,"MALONEY, Carolyn Bosher",1946,-0.387,-0.285
+House,29776,5,NY,Democratic,"MEEKS, Gregory W.",1953,-0.414,-0.071
+House,15438,4,NC,Democratic,"PRICE, David Eugene",1940,-0.343,-0.03
+House,20340,1,NC,Democratic,"BUTTERFIELD, George Kenneth, Jr. (G.K.)",1947,-0.404,0.184
+House,20521,5,NC,Republican,"FOXX, Virginia Ann",1943,0.625,0.164
+House,20522,10,NC,Republican,"McHENRY, Patrick T.",1975,0.53,0.128
+House,21346,8,NC,Republican,"HUDSON, Richard",1971,0.532,0.163
+House,21544,7,NC,Republican,"ROUZER, David",1972,0.559,0.23
+House,21545,12,NC,Democratic,"ADAMS, Alma",1946,-0.469,0.021
+House,21708,13,NC,Republican,"BUDD, Theodore Paul",1971,0.631,-0.08
+House,21986,9,NC,Republican,"BISHOP, Dan",1964,0.715,-0.356
+House,21987,3,NC,Republican,"MURPHY, Gregory Francis",1963,0.494,0.048
+House,22109,11,NC,Republican,"CAWTHORN, Madison",1995,0.555,-0.243
+House,22135,6,NC,Democratic,"MANNING, Kathy E.",1956,-0.268,0.332
+House,22149,2,NC,Democratic,"ROSS, Deborah K.",1963,-0.458,0.22
+House,21901,1,ND,Republican,"ARMSTRONG, Kelly",1976,0.469,0.014
+House,21996,0,MP,Democratic,"SABLAN, Gregorio Kilili Camacho",1955,-0.446,-0.082
+House,15029,9,OH,Democratic,"KAPTUR, Marcia Carolyn (Marcy)",1946,-0.348,0.115
+House,20342,10,OH,Republican,"TURNER, Michael R.",1960,0.274,0.222
+House,20343,13,OH,Democratic,"RYAN, Timothy J.",1973,-0.402,0.208
+House,20738,4,OH,Republican,"JORDAN, Jim",1964,0.717,-0.2
+House,20755,5,OH,Republican,"LATTA, Robert E.",1956,0.511,0.282
+House,20941,11,OH,Democratic,"FUDGE, Marcia L.",1952,-0.581,0.14
+House,21162,6,OH,Republican,"JOHNSON, Bill",1954,0.425,0.273
+House,21163,15,OH,Republican,"STIVERS, Steve",1965,0.3,0.269
+House,21165,7,OH,Republican,"GIBBS, Bob",1954,0.484,0.284
+House,21351,2,OH,Republican,"WENSTRUP, Brad",1958,0.527,0.255
+House,21352,3,OH,Democratic,"BEATTY, Joyce",1950,-0.438,0.04
+House,21353,14,OH,Republican,"JOYCE, David",1957,0.261,0.275
+House,21564,8,OH,Republican,"DAVIDSON, Warren",1970,0.666,-0.339
+House,21759,12,OH,Republican,"BALDERSON, Troy",1962,0.432,0.306
+House,21924,16,OH,Republican,"GONZALEZ, Anthony",1984,0.24,0.315
+House,22161,11,OH,Democratic,"BROWN, Shontel  M.",1975,-0.519,-0.006
+House,22162,15,OH,Republican,"CAREY, Mike",1971,0.416,0.007
+House,29550,1,OH,Republican,"CHABOT, Steve",1953,0.542,-0.137
+House,20344,4,OK,Republican,"COLE, Tom",1949,0.329,0.377
+House,21355,2,OK,Republican,"MULLIN, Markwayne",1977,0.545,0.246
+House,21760,1,OK,Republican,"HERN, Kevin",1961,0.684,-0.067
+House,22102,5,OK,Republican,"BICE, Stephanie I.",1973,0.413,0.38
+House,29393,3,OK,Republican,"LUCAS, Frank D.",1960,0.366,0.419
+House,15410,4,OR,Democratic,"DeFAZIO, Peter Anthony",1947,-0.427,-0.002
+House,20944,5,OR,Democratic,"SCHRADER, Kurt",1951,-0.182,0.054
+House,21198,1,OR,Democratic,"BONAMICI, Suzanne",1954,-0.394,-0.413
+House,22101,2,OR,Republican,"BENTZ, Cliff",1952,0.473,0.382
+House,29588,3,OR,Democratic,"BLUMENAUER, Earl",1948,-0.427,-0.647
+House,20946,15,PA,Republican,"THOMPSON, Glenn",1959,0.323,0.384
+House,21167,16,PA,Republican,"KELLY, Mike",1948,0.372,0.4
+House,21356,10,PA,Republican,"PERRY, Scott",1962,0.674,-0.451
+House,21358,8,PA,Democratic,"CARTWRIGHT, Matt",1961,-0.356,-0.015
+House,21548,2,PA,Democratic,"BOYLE, Brendan Francis",1977,-0.398,0.137
+House,21566,3,PA,Democratic,"EVANS, Dwight",1954,-0.466,-0.103
+House,21718,1,PA,Republican,"FITZPATRICK, Brian K.",1973,0.153,-0.175
+House,21745,11,PA,Republican,"SMUCKER, Lloyd K.",1964,0.427,0.224
+House,21756,17,PA,Democratic,"LAMB, Conor",1984,-0.143,0.212
+House,21762,5,PA,Democratic,"SCANLON, Mary Gay",1959,-0.452,-0.057
+House,21763,7,PA,Democratic,"WILD, Susan",1957,-0.275,0.379
+House,21915,4,PA,Democratic,"DEAN, Madeleine",1959,-0.463,0.013
+House,21934,6,PA,Democratic,"HOULAHAN, Christina",1967,-0.284,0.389
+House,21936,13,PA,Republican,"JOYCE, John",1957,0.567,0.017
+House,21945,9,PA,Republican,"MEUSER, Dan",1964,0.499,0.234
+House,21956,14,PA,Republican,"RESCHENTHALER, Guy",1983,0.394,0.226
+House,21985,12,PA,Republican,"KELLER, Fred",1965,0.498,0.171
+House,29561,18,PA,Democratic,"DOYLE, Michael F.",1953,-0.331,0.099
+House,21992,0,PR,Republican,"GONZÁLEZ-CÓLON, Jenniffer",1976,0.276,0.242
+House,20136,2,RI,Democratic,"LANGEVIN, James",1964,-0.375,0.114
+House,21172,1,RI,Democratic,"CICILLINE, David N.",1961,-0.389,-0.262
+House,20138,2,SC,Republican,"WILSON, Addison Graves (Joe)",1947,0.529,0.151
+House,21174,3,SC,Republican,"DUNCAN, Jeff",1966,0.7,-0.097
+House,21359,7,SC,Republican,"RICE, Tom",1957,0.558,-0.217
+House,21753,5,SC,Republican,"NORMAN, Ralph",1953,0.848,-0.359
+House,21974,4,SC,Republican,"TIMMONS, William",1984,0.592,0.207
+House,22132,1,SC,Republican,"MACE, Nancy",1977,0.359,-0.279
+House,39301,6,SC,Democratic,"CLYBURN, James Enos",1940,-0.465,0.25
+House,21935,1,SD,Republican,"JOHNSON, Dustin",1976,0.438,0.231
+House,15019,5,TN,Democratic,"COOPER, James Hayes Shofner",1954,-0.164,-0.033
+House,20748,9,TN,Democratic,"COHEN, Stephen",1949,-0.398,-0.34
+House,21178,3,TN,Republican,"FLEISCHMANN, Chuck",1962,0.465,0.277
+House,21179,4,TN,Republican,"DESJARLAIS, Scott",1964,0.579,-0.059
+House,21731,8,TN,Republican,"KUSTOFF, David",1966,0.536,0.348
+House,21905,2,TN,Republican,"BURCHETT, Timothy",1964,0.666,-0.356
+House,21926,7,TN,Republican,"GREEN, Mark",1964,0.672,0.035
+House,21959,6,TN,Republican,"ROSE, John",1965,0.674,0.097
+House,22122,1,TN,Republican,"HARSHBARGER, Diana",1960,0.685,0.043
+House,20355,26,TX,Republican,"BURGESS, Michael C.",1950,0.575,-0.206
+House,20356,31,TX,Republican,"CARTER, John R.",1941,0.486,0.563
+House,20527,1,TX,Republican,"GOHMERT, Louie",1953,0.644,-0.406
+House,20529,9,TX,Democratic,"GREEN, Al",1947,-0.44,0.291
+House,20530,10,TX,Republican,"McCAUL, Michael T.",1962,0.421,0.125
+House,20533,28,TX,Democratic,"CUELLAR, Henry",1955,-0.228,0.623
+House,21360,14,TX,Republican,"WEBER, Randy",1953,0.73,0.025
+House,21362,20,TX,Democratic,"CASTRO, Joaquin",1974,-0.401,-0.05
+House,21364,25,TX,Republican,"WILLIAMS, Roger",1949,0.588,0.12
+House,21365,33,TX,Democratic,"VEASEY, Marc",1971,-0.402,0.336
+House,21366,34,TX,Democratic,"VELA, Filemon",1963,-0.311,0.407
+House,21551,36,TX,Republican,"BABIN, Brian",1948,0.71,0.083
+House,21700,19,TX,Republican,"ARRINGTON, Jodey Cook",1972,0.645,-0.04
+House,21722,15,TX,Democratic,"GONZALEZ, Vicente Jr.",1967,-0.384,0.738
+House,21758,27,TX,Republican,"CLOUD, Michael",1975,0.682,-0.316
+House,21900,32,TX,Democratic,"ALLRED, Colin",1983,-0.453,0.744
+House,21911,2,TX,Republican,"CRENSHAW, Daniel",1984,0.427,0.24
+House,21917,16,TX,Democratic,"ESCOBAR, Veronica",1969,-0.445,-0.357
+House,21919,7,TX,Democratic,"FLETCHER, Elizabeth",1975,-0.44,0.898
+House,21922,29,TX,Democratic,"GARCIA, Sylvia",1950,-0.808,0.508
+House,21925,5,TX,Republican,"GOODEN, Lance",1982,0.746,-0.073
+House,21961,21,TX,Republican,"ROY, Charles",1972,0.8,-0.6
+House,21973,3,TX,Republican,"TAYLOR, Nicholas",1972,0.581,-0.223
+House,21984,6,TX,Republican,"WRIGHT, Ron",1953,0.711,-0.09
+House,22112,4,TX,Republican,"FALLON, Pat",1967,0.725,0.146
+House,22119,23,TX,Republican,"GONZALES, Tony",1980,0.298,0.414
+House,22125,13,TX,Republican,"JACKSON, Ronny",1967,0.773,0.123
+House,22143,22,TX,Republican,"NEHLS, Troy E.",1968,0.629,-0.17
+House,22147,11,TX,Republican,"PFLUGER, August",1977,0.66,0.405
+House,22155,24,TX,Republican,"VAN DUYNE, Beth",1970,0.58,-0.006
+House,22160,6,TX,Republican,"ELLZEY, Jake",1970,0.514,0.403
+House,22165,34,TX,Republican,"FLORES, Mayra",1986,0.336,0.623
+House,29571,35,TX,Democratic,"DOGGETT, Lloyd Alton, II",1946,-0.402,-0.316
+House,29573,18,TX,Democratic,"JACKSON LEE, Sheila",1950,-0.46,0.125
+House,29759,17,TX,Republican,"SESSIONS, Pete",1955,0.591,0.136
+House,29760,8,TX,Republican,"BRADY, Kevin Patrick",1955,0.52,0.239
+House,29762,12,TX,Republican,"GRANGER, Kay",1943,0.403,0.234
+House,39305,30,TX,Democratic,"JOHNSON, Eddie Bernice",1935,-0.485,0.198
+House,21367,2,UT,Republican,"STEWART, Chris",1960,0.499,0.167
+House,21755,3,UT,Republican,"CURTIS, John R.",1960,0.47,0.093
+House,22141,1,UT,Republican,"MOORE, Blake D.",1980,0.353,0.362
+House,22146,4,UT,Republican,"OWENS, Burgess",1951,0.456,0.244
+House,20750,1,VT,Democratic,"WELCH, Peter",1947,-0.409,-0.362
+House,21994,0,VI,Democratic,"PLASKETT, Stacey E.",1966,-0.414,0.475
+House,20756,1,VA,Republican,"WITTMAN, Robert J.",1959,0.444,0.014
+House,20952,11,VA,Democratic,"CONNOLLY, Gerald E. (Gerry)",1950,-0.306,-0.032
+House,21191,9,VA,Republican,"GRIFFITH, H. Morgan",1958,0.532,-0.392
+House,21554,8,VA,Democratic,"BEYER, Donald Sternoff Jr.",1950,-0.386,-0.067
+House,21736,4,VA,Democratic,"MCEACHIN, Aston Donald",1961,-0.381,-0.017
+House,21908,6,VA,Republican,"CLINE, Benjamin",1972,0.719,-0.203
+House,21941,2,VA,Democratic,"LURIA, Elaine",1975,-0.206,0.426
+House,21966,7,VA,Democratic,"SPANBERGER, Abigail",1979,-0.177,0.329
+House,21983,10,VA,Democratic,"WEXTON, Jennifer",1968,-0.35,0.294
+House,22120,5,VA,Republican,"GOOD, Bob",1965,0.8,-0.6
+House,39307,3,VA,Democratic,"SCOTT, Robert C.",1947,-0.45,0.014
+House,20145,2,WA,Democratic,"LARSEN, Richard Ray (Rick)",1965,-0.365,0.18
+House,20535,5,WA,Republican,"McMORRIS RODGERS, Cathy",1969,0.422,0.141
+House,21187,3,WA,Republican,"HERRERA BEUTLER, Jaime",1978,0.336,-0.129
+House,21368,6,WA,Democratic,"KILMER, Derek",1974,-0.309,-0.015
+House,21556,4,WA,Republican,"NEWHOUSE, Daniel Milton",1955,0.33,0.293
+House,21726,7,WA,Democratic,"JAYAPAL, Pramila",1965,-0.653,-0.425
+House,21962,8,WA,Democratic,"SCHRIER, Kim",1968,-0.285,0.448
+House,22153,10,WA,Democratic,"STRICKLAND, Marilyn",1962,-0.412,0.3
+House,29768,9,WA,Democratic,"SMITH, Adam",1965,-0.287,-0.165
+House,31101,1,WA,Democratic,"DelBENE, Suzan K.",1962,-0.289,-0.2
+House,21188,1,WV,Republican,"McKINLEY, David",1947,0.3,0.178
+House,21557,2,WV,Republican,"MOONEY, Alex X.",1971,0.557,-0.201
+House,21946,3,WV,Republican,"MILLER, Carol",1950,0.495,0.246
+House,20537,4,WI,Democratic,"MOORE, Gwendolynne S. (Gwen)",1951,-0.526,-0.251
+House,21370,2,WI,Democratic,"POCAN, Mark",1964,-0.531,-0.552
+House,21559,6,WI,Republican,"GROTHMAN, Glenn",1955,0.6,-0.247
+House,21720,8,WI,Republican,"GALLAGHER, Michael",1984,0.427,0.022
+House,21970,1,WI,Republican,"STEIL, Bryan",1981,0.412,0.061
+House,21989,7,WI,Republican,"TIFFANY, Thomas P.",1957,0.644,-0.218
+House,22115,5,WI,Republican,"FITZGERALD, Scott",1963,0.609,0.217
+House,29769,3,WI,Democratic,"KIND, Ron",1963,-0.26,-0.08
+House,21710,1,WY,Republican,"CHENEY, Liz",1966,0.405,0.82

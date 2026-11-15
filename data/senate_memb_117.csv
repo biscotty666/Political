@@ -1,0 +1,103 @@
+chamber,icpsr,district_code,state_abbrev,party_code,bioname,born,nominate_dim1,nominate_dim2,party
+Senate,42102,0,AL,Republican,"TUBERVILLE, Thomas Hawley (Tommy)",1954,0.936,-0.352,Republican
+Senate,94659,0,AL,Republican,"SHELBY, Richard C.",1934,0.446,0.57,Republican
+Senate,40300,0,AK,Republican,"MURKOWSKI, Lisa",1957,0.211,-0.306,Republican
+Senate,41500,0,AK,Republican,"SULLIVAN, Daniel Scott",1964,0.483,0.079,Republican
+Senate,21300,0,AZ,Democratic,"SINEMA, Kyrsten",1976,-0.105,0.076,Democratic
+Senate,41905,0,AZ,Democratic,"KELLY, Mark Edward",1964,-0.2,0.28,Democratic
+Senate,20101,0,AR,Republican,"BOOZMAN, John",1950,0.425,0.334,Republican
+Senate,21301,0,AR,Republican,"COTTON, Tom",1977,0.599,0.154,Republican
+Senate,41701,0,CA,Democratic,"HARRIS, Kamala Devi",1964,-0.709,-0.105,Democratic
+Senate,42104,0,CA,Democratic,"PADILLA, Alejandro (Alex)",1973,-0.396,-0.343,Democratic
+Senate,49300,0,CA,Democratic,"FEINSTEIN, Dianne",1933,-0.268,-0.184,Democratic
+Senate,40910,0,CO,Democratic,"BENNET, Michael F.",1964,-0.23,-0.169,Democratic
+Senate,42101,0,CO,Democratic,"HICKENLOOPER, John Wright",1952,-0.249,-0.069,Democratic
+Senate,20707,0,CT,Democratic,"MURPHY, Christopher",1973,-0.272,-0.202,Democratic
+Senate,41101,0,CT,Democratic,"BLUMENTHAL, Richard",1946,-0.436,-0.166,Democratic
+Senate,15015,0,DE,Democratic,"CARPER, Thomas Richard",1947,-0.178,-0.226,Democratic
+Senate,40916,0,DE,Democratic,"COONS, Christopher A.",1963,-0.231,-0.212,Democratic
+Senate,41102,0,FL,Republican,"RUBIO, Marco",1971,0.613,-0.165,Republican
+Senate,41903,0,FL,Republican,"SCOTT, Richard Lynn (Rick)",1952,0.664,0.166,Republican
+Senate,41904,0,GA,Republican,"LOEFFLER, Kelly",1970,0.555,-0.203,Republican
+Senate,42103,0,GA,Democratic,"OSSOFF, Thomas Jonathan (Jon)",1987,-0.444,0.44,Democratic
+Senate,42105,0,GA,Democratic,"WARNOCK, Raphael Gamaliel",1969,-0.407,0.373,Democratic
+Senate,20713,0,HI,Democratic,"HIRONO, Mazie",1947,-0.513,-0.085,Democratic
+Senate,41112,0,HI,Democratic,"SCHATZ, Brian Emanuel",1972,-0.443,-0.105,Democratic
+Senate,29345,0,ID,Republican,"CRAPO, Michael Dean",1951,0.501,0.283,Republican
+Senate,40902,0,ID,Republican,"RISCH, James",1943,0.549,0.395,Republican
+Senate,15021,0,IL,Democratic,"DURBIN, Richard Joseph",1944,-0.348,-0.303,Democratic
+Senate,21325,0,IL,Democratic,"DUCKWORTH, Tammy",1968,-0.336,0.093,Democratic
+Senate,21133,0,IN,Republican,"YOUNG, Todd",1972,0.449,-0.052,Republican
+Senate,41900,0,IN,Republican,"BRAUN, Michael",1954,0.8,0.6,Republican
+Senate,14226,0,IA,Republican,"GRASSLEY, Charles Ernest",1933,0.356,-0.045,Republican
+Senate,41502,0,IA,Republican,"ERNST, Joni",1970,0.538,-0.038,Republican
+Senate,21734,0,KS,Republican,"MARSHALL, Roger Wayne",1960,0.587,0.172,Republican
+Senate,29722,0,KS,Republican,"MORAN, Jerry",1954,0.417,0.217,Republican
+Senate,14921,0,KY,Republican,"McCONNELL, Addison Mitchell (Mitch)",1942,0.404,0.014,Republican
+Senate,41104,0,KY,Republican,"PAUL, Rand",1963,0.891,-0.454,Republican
+Senate,20919,0,LA,Republican,"CASSIDY, Bill",1957,0.469,-0.065,Republican
+Senate,41703,0,LA,Republican,"KENNEDY, John Neely",1951,0.551,-0.082,Republican
+Senate,41300,0,ME,Independent,"KING, Angus Stanley, Jr.",1944,-0.162,-0.209,Independent
+Senate,49703,0,ME,Republican,"COLLINS, Susan Margaret",1952,0.117,-0.531,Republican
+Senate,15408,0,MD,Democratic,"CARDIN, Benjamin Louis",1943,-0.32,-0.228,Democratic
+Senate,20330,0,MD,Democratic,"VAN HOLLEN, Christopher",1959,-0.392,-0.209,Democratic
+Senate,14435,0,MA,Democratic,"MARKEY, Edward John",1946,-0.514,-0.462,Democratic
+Senate,41301,0,MA,Democratic,"WARREN, Elizabeth",1949,-0.753,-0.335,Democratic
+Senate,20923,0,MI,Democratic,"PETERS, Gary C.",1958,-0.246,-0.185,Democratic
+Senate,29732,0,MI,Democratic,"STABENOW, Deborah Ann",1950,-0.342,-0.016,Democratic
+Senate,40700,0,MN,Democratic,"KLOBUCHAR, Amy",1960,-0.284,-0.363,Democratic
+Senate,41706,0,MN,Democratic,"SMITH, Tina",1958,-0.397,-0.073,Democratic
+Senate,29534,0,MS,Republican,"WICKER, Roger F.",1951,0.377,0.35,Republican
+Senate,41707,0,MS,Republican,"HYDE-SMITH, Cindy",1959,0.451,0.352,Republican
+Senate,29735,0,MO,Republican,"BLUNT, Roy",1950,0.398,0.18,Republican
+Senate,41901,0,MO,Republican,"HAWLEY, Joshua David",1979,0.751,-0.22,Republican
+Senate,21338,0,MT,Republican,"DAINES, Steve",1962,0.585,-0.039,Republican
+Senate,40702,0,MT,Democratic,"TESTER, Jon",1956,-0.215,0.164,Democratic
+Senate,41302,0,NE,Republican,"FISCHER, Debra (Deb)",1951,0.462,0.306,Republican
+Senate,41503,0,NE,Republican,"SASSE, Benjamin Eric",1972,0.669,-0.25,Republican
+Senate,21743,0,NV,Democratic,"ROSEN, Jacklyn Sheryl",1957,-0.288,0.323,Democratic
+Senate,41700,0,NV,Democratic,"CORTEZ MASTO, Catherine Marie",1964,-0.36,0.329,Democratic
+Senate,40906,0,NH,Democratic,"SHAHEEN, Jeanne",1947,-0.238,-0.135,Democratic
+Senate,41702,0,NH,Democratic,"HASSAN, Margaret (Maggie)",1958,-0.233,0.023,Democratic
+Senate,29373,0,NJ,Democratic,"MENENDEZ, Robert",1954,-0.367,-0.123,Democratic
+Senate,41308,0,NJ,Democratic,"BOOKER, Cory Anthony",1969,-0.582,-0.271,Democratic
+Senate,20930,0,NM,Democratic,"HEINRICH, Martin",1971,-0.329,-0.026,Democratic
+Senate,20932,0,NM,Democratic,"LUJÁN, Ben Ray",1972,-0.368,0.015,Democratic
+Senate,14858,0,NY,Democratic,"SCHUMER, Charles Ellis (Chuck)",1950,-0.355,-0.417,Democratic
+Senate,20735,0,NY,Democratic,"GILLIBRAND, Kirsten",1966,-0.469,-0.418,Democratic
+Senate,29548,0,NC,Republican,"BURR, Richard M.",1955,0.435,-0.07,Republican
+Senate,41504,0,NC,Republican,"TILLIS, Thomas Roland (Thom)",1960,0.4,-0.109,Republican
+Senate,21350,0,ND,Republican,"CRAMER, Kevin",1961,0.399,0.392,Republican
+Senate,41107,0,ND,Republican,"HOEVEN, John",1957,0.39,0.438,Republican
+Senate,29386,0,OH,Republican,"PORTMAN, Robert Jones (Rob)",1955,0.371,-0.208,Republican
+Senate,29389,0,OH,Democratic,"BROWN, Sherrod",1952,-0.427,-0.105,Democratic
+Senate,15424,0,OK,Republican,"INHOFE, James Mountain",1934,0.552,0.045,Republican
+Senate,21166,0,OK,Republican,"LANKFORD, James",1968,0.608,0.172,Republican
+Senate,14871,0,OR,Democratic,"WYDEN, Ronald Lee",1949,-0.33,-0.479,Democratic
+Senate,40908,0,OR,Democratic,"MERKLEY, Jeff",1956,-0.442,-0.735,Democratic
+Senate,29935,0,PA,Republican,"TOOMEY, Patrick Joseph",1961,0.624,-0.378,Republican
+Senate,40703,0,PA,Democratic,"CASEY, Robert (Bob), Jr.",1960,-0.313,0.168,Democratic
+Senate,29142,0,RI,Democratic,"REED, John F. (Jack)",1949,-0.367,-0.174,Democratic
+Senate,40704,0,RI,Democratic,"WHITEHOUSE, Sheldon",1955,-0.355,-0.086,Democratic
+Senate,21173,0,SC,Republican,"SCOTT, Tim",1965,0.629,-0.008,Republican
+Senate,29566,0,SC,Republican,"GRAHAM, Lindsey O.",1955,0.371,-0.267,Republican
+Senate,29754,0,SD,Republican,"THUNE, John",1961,0.428,0.212,Republican
+Senate,41505,0,SD,Republican,"ROUNDS, Marion Michael (Mike)",1954,0.364,0.074,Republican
+Senate,20351,0,TN,Republican,"BLACKBURN, Marsha",1952,0.628,0.147,Republican
+Senate,42100,0,TN,Republican,"HAGERTY, William Francis (Bill)",1959,0.693,-0.137,Republican
+Senate,40305,0,TX,Republican,"CORNYN, John",1952,0.473,-0.079,Republican
+Senate,41304,0,TX,Republican,"CRUZ, Rafael Edward (Ted)",1970,0.806,-0.195,Republican
+Senate,41110,0,UT,Republican,"LEE, Mike",1971,0.891,-0.454,Republican
+Senate,41902,0,UT,Republican,"ROMNEY, Willard Mitt (Mitt)",1947,0.287,0.308,Republican
+Senate,14307,0,VT,Democratic,"LEAHY, Patrick Joseph",1940,-0.36,-0.121,Democratic
+Senate,29147,0,VT,Independent,"SANDERS, Bernard",1941,-0.539,-0.398,Independent
+Senate,40909,0,VA,Democratic,"WARNER, Mark",1954,-0.205,-0.051,Democratic
+Senate,41305,0,VA,Democratic,"KAINE, Timothy Michael (Tim)",1958,-0.245,-0.062,Democratic
+Senate,39310,0,WA,Democratic,"CANTWELL, Maria E.",1958,-0.305,-0.411,Democratic
+Senate,49308,0,WA,Democratic,"MURRAY, Patty",1950,-0.352,-0.305,Democratic
+Senate,20146,0,WV,Republican,"CAPITO, Shelley Moore",1953,0.277,0.129,Republican
+Senate,40915,0,WV,Democratic,"MANCHIN, Joe, III",1947,-0.058,0.406,Democratic
+Senate,29940,0,WI,Democratic,"BALDWIN, Tammy",1962,-0.492,-0.135,Democratic
+Senate,41111,0,WI,Republican,"JOHNSON, Ron",1955,0.629,-0.146,Republican
+Senate,20953,0,WY,Republican,"LUMMIS, Cynthia M.",1954,0.691,-0.34,Republican
+Senate,40707,0,WY,Republican,"BARRASSO, John A.",1952,0.537,0.224,Republican
