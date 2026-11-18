@@ -1,0 +1,437 @@
+---
+title: "Analyzing Election Studies"
+format: gfm
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+options(paged.print = F, digits = 4)
+```
+
+```{r}
+#| message: false
+library(tidyverse)
+library(collapse)
+library(magrittr)
+library(survey)
+```
+
+[Variable table](https://sda.berkeley.edu/sdaweb/docs/nes2020full/DOC/hcbkx01.htm)
+[Source](https://whittkilburn.github.io/inpolr/ch9.html)
+[ANES](https://electionstudies.org/data-center/2020-time-series-study/)
+
+
+# Election polling
+
+The example of Dewey's loss to Truman, despite the polls.
+
+The ANES survey developed a more representative sample than the quota sampling methods used before. The survey involved pre-election and post-election polling, including, views on policy issues and demogrphic background.
+
+In the pre-election survey, respondents were asked whether they intended to vote in the presidential election and the party of their vote choice. Among likely voters, 47.09 percent chose the Democratic party and 49.24 percent Republican. The survey showed Dewey with more support than
+Truman, well within the survey’s 3.8 percent margin of error, making the election too close to call. Given the candidate centered focus of American politics, even as early as 1948 a survey question asking about party support would have been a fuzzy indicator of vote choice. In the
+post-election survey, respondents were asked for which candidate they voted back in November. Among likely voters, 50.2 percent of respondents reported voting for Truman and 42.2 percent for Dewey. While under-counting Dewey’s support, support for Truman differed by less than a percentage point, just barely exceeding the margin of error. The ANES could have called the election correctly.
+
+We will: - tabulate survey responses - construct cross-tabulations (contingency tables), a fundamental tool for exploring associations between two categorical measures - calculate sample means and proportions. - account for likely ranges of population-level characteristics given the ANES sample - test the sample against hypothetical population values - create data visualizations commonly used in the study of public opinion. Prior to analyzing the 2020 ANES data, however, we first need to become familiar with basic aspects of national election poll sampling.
+
+## Sampling a national electorate
+
+Methods include 3 key components.
+
+1.  Sampling within strata - dividing the country into geographic or demographic regions
+2.  Clustering interviews - within each stratum, interviews clustered in specific areas to reduce cost; increased uncertainty must be accounted for
+3.  Observation weights applied to correct for unequal probabilies of selection and over or under representation of groups
+
+## The 2020 ANES survey
+
+```{r}
+load("data/anes 2020 survey data.rdata")
+```
+
+```{r}
+library(haven)
+anes_stata <- haven::read_dta("data/anes/anes_timeseries_2020_stata_20220210.dta")
+str(anes_stata$V200005)
+```
+
+
+```{r}
+names(anes_20)
+```
+
+For example, the sixth variable V201005. In the codebook following the name is a variable label, which explains that the subject matter of the question is “How often does \[respondent\] pay attention to politics and elections”. In the second section of the codebook the exact wording of
+the survey question is “How often do you pay attention to what’s going on in government and politics?”
+
+The results show the (unweighted) frequencies. Variables can be factors or numeric.
+
+```{r}
+str(anes_20$V201005)
+```
+
+```{r}
+summary(anes_20$V201005)
+```
+
+Variables stored in the numeric storage type are purely numeric scores without a verbal label attached, such as age or a feeling thermometer score. Variable V202162 records feelings toward labor unions.
+
+```{r}
+str(anes_20$V202162)
+summary(anes_20$V202162)
+```
+
+Factors can be treated as numeric
+
+```{r}
+summary(as.numeric(anes_20$V201005))
+```
+
+# Specifying a survey sample design
+
+To account for the complex survey design, analyses must adjust for the three key elements: strata, clusters, and weights. 
+
+V200015a 	All fresh sample (excludes 2016) pre-election weight
+V200015b 	All fresh sample (excludes 2016) post-election weight
+V200015c 	All fresh sample (excludes 2016) variance unit
+V200015d 	All fresh sample (excludes 2016) variance stratum
+
+For the 2020 ANES survey data, the sample design is specified as follows:
+
+```{r}
+anes2020 <- svydesign(data = anes_20, strata = ~V200015d,
+                      ids = ~V200015c, weights = ~V200015b, nest = T)
+```
+
+# Tabulating and cross-tabulating survey measures
+
+The svytable() function tabulates the weighted frequencies for a variable, such as V201005. Two arguments are required: the variable to tabulate and the survey design object.
+
+```{r}
+svytable(~V201005, anes2020, round = T)
+```
+
+```{r}
+(table1 <- prop.table(svytable(~V201005, anes2020, round = T)) * 100)
+```
+
+## Cross-tabulation (contingency) tables
+
+Tabluate by sex (V201600).
+
+```{r}
+svytable(~ V201005 + V201600, anes2020, round = T)
+```
+
+## Creating and recoding a new survey measure
+
+Create a new sex variable with "Refused" changed to `NA`.
+
+```{r}
+anes_20 %<>% fmutate(sex = V201600)
+```
+
+```{r}
+anes_20 %<>% 
+  fmutate(sex = fct_recode(V201600, NULL = "-9. Refused"))
+```
+
+One important step in analyzing data with the survey package is that each time a new variable is created, the svydesign() function must be run again, so that the names of the new variables are stored within the svydesign() object.
+
+```{r}
+make_anes_survey <- function() svydesign(data = anes_20, ids = ~V200015c,
+            strata = ~V200015d, weights = ~V200015b, nest = T)
+anes2020 <- 
+  svydesign(data = anes_20, ids = ~V200015c,
+            strata = ~V200015d, weights = ~V200015b, nest = T)
+```
+
+```{r}
+svytable(~V201005 + sex, anes2020, round = T)
+```
+
+## Column and row proportions in a contingency table
+
+Column proportions
+
+```{r}
+svytable(~V201005 + sex, anes2020, round = T) %>% prop.table(margin = 2)
+```
+
+The table appears to show an association between sex and interest.
+
+# Test of independence for contingency tables
+
+The Chi-squared test of independence can be used to determine if the association is statistically significant. 
+
+```{r}
+svychisq(~V201005 + sex, anes2020)
+```
+
+The association is statistically significant
+
+## Contingency tables controlling for a third factor
+
+In a contingency table we could observe that two measures are related (a y covarying with x), but the possibility remains that the relationship is spurious — any observed association in the relationship between x and y could be the result of a third variable z that influences both. To test the extent to which the relationship within a contingency table persists when controlling for a third factor, we subset the data on values of the third factor and recalculate the contingency table. 
+
+To demonstrate, we will cross-tabulate party identification by religious service attendance, then on levels of sex, to observe whether there is evidence — controlling for sex — that Democrats report less religiosity than Republicans.
+
+## Recoding for a table of party identification by religiosity
+
+The two relevant variables from the survey are V201228 for party identification, and for religious service attendance the variable attend, constructed from V201452 and V201453. 
+
+```{r}
+anes_20 %<>%
+  fmutate(
+    partyid = fct_recode(V201228,
+      "3. Independent" = "-9. Refused",
+      "3. Independent" = "-8. Don't know",
+      "3. Independent" = "0. No preference {VOL - video/phone only}",
+      NULL = "5. Other party {SPECIFY}"
+    ),
+    partyid = fct_relevel(
+      partyid, "1. Democrat", "2. Republican",
+      "3. Independent"
+    )
+  )
+```
+
+Creating a measure that summarizes a survey respondent’s attendance at religious services requires combining responses from two different survey questions. First, respondents are asked whether they attend religious services at all:
+
+```{r}
+table(anes_20$V201452)
+```
+
+Then if they respond “Yes”, they are asked how frequently:
+
+```{r}
+table(anes_20$V201453)
+```
+
+```{r}
+anes_20 %<>%
+  fmutate(attend = case_when(
+    V201452 == "2. No" ~ "1. Never",
+    V201453 == "5. Never" ~ "1. Never",
+    V201453 == "4. A few times a year" ~ "2. A few times a year",
+    V201453 == "3. Once or twice a month" ~ "3. Once or twice a month",
+    V201453 == "2. Almost every week" ~ "4. Almost every week",
+    V201453 == "1. Every week" ~ "5. Every week"))
+```
+
+```{r}
+table(anes_20$attend)
+```
+
+Combine 2 and three:
+
+```{r}
+anes_20 %<>%
+  fmutate(attend = fct_recode(attend,
+        "2. few times a year, monthly" = "2. A few times a year",
+        "2. few times a year, monthly" = "3. Once or twice a month",
+        "3. almost every week" = "4. Almost every week",
+        "4. every week" = "5. Every week"))
+```
+
+```{r}
+anes2020 <- make_anes_survey()
+```
+
+```{r}
+prop.table(svytable(~ partyid + attend, design = anes2020, round = T),
+           margin = 2)
+```
+
+Yet given the possibility that these relationships break down when controlling for sex, we recreate the cross-tabulation on each value of the sex variable. In constructing control tables such as these, the goal is to test whether any observed relationship between the independent and dependent variable persists for each level of the control variable. If the relationship between party identification and religious service attendance appears at least somewhat null across levels of sex (1. Male and 2.Female), then this pattern would be evidence of spuriousness. Of course, it is unlikely that sex would be a source of spuriousness; it is much more likely that we would observe sex as an additive effect shifting party identification and religious attendance in a particular direction.
+
+```{r}
+svytable(~ partyid + attend, subset(anes2020, sex == "1. Male"), round = T) %>% 
+  prop.table(margin = 2)
+```
+
+```{r}
+svytable(~ partyid + attend, subset(anes2020, sex == "2. Female"), round = T) %>% 
+  prop.table(margin = 2)
+```
+
+```{r}
+svychisq(~ partyid + attend, subset(anes2020, sex == "2. Female"), round = T)
+```
+
+Among males and females, the gap between Democrats and Republicans among those reporting that they “Never” attend services is about 5 and 21 percent, respectively. Among those attending services weekly, the gap between Republicans and Democrats is 29 and 18 percent. Rather than being a source of spuriousness, sex is better described as an additive factor — pushing up Republican party identity among males and Democratic party identity among females. Notice that among non-attendees, 41.84 percent of females identify as Democrats, an 11 percent gap compared to males, while only 45.24 percent of females attending services weekly identify as Republican, a similar gap compared to males.
+
+# Confidence intervals and tests on proportions and means
+
+The function confint() calculates, by default, 95 percent confidence intervals. For a variable stored as a factor, with ordered or nominal categories, the svymean() function calculates the proportions based on a mean (from each category scaled to a value of 1), and wrapped within confint() reports the lower and upper bounds of a confidence interval. Because there are missing values recorded for some respondents, the argument na.rm=TRUE is necessary
+
+```{r}
+confint(svymean(~ partyid, anes2020, na.rm = T))
+```
+
+With a 95% confidence level we can say that between 32% and 36% identify as Democrat.
+
+The same functions applied to a numeric variable results in a mean and confidence interval on the underlying scale. For example, the feeling thermometer for the “U.S. Supreme Court” ranges from 0 to 100. 
+
+```{r}
+svymean(~V202165, anes2020, na.rm = T)
+```
+
+```{r}
+svymean(~V202165, anes2020, na.rm = T) %>% confint
+```
+
+Mean feeling toward court is between 58.5 and 60.5 degrees.
+
+## Tables of means for levels of a categorical variable
+
+The `svyby()` function can be combined with svymean() to calculate a table of means on a categorical (factor) variable. For example, we could create age groups based on the survey question V201507x recording the survey respondent’s age, and compare feeling thermometer scores across age groups. Feelings toward “transgender people” is recorded in variable V202172.
+
+```{r}
+anes_20 %<>%
+  fmutate(agecat = case_when(
+    V201507x %in% 15:29 ~ "18 to 29",
+    V201507x %in% 30:49 ~ "30 to 49",
+    V201507x %in% 50:59 ~ "50 to 59",
+    V201507x %in% 60:100 ~ "60 and above"
+  )) %>%
+  fmutate(
+    agecat = as_factor(agecat),
+    agecat = fct_relevel(
+      agecat, "18 to 29",
+      "30 to 49", "50 to 59", "60 and above"
+    )
+  )
+```
+
+```{r}
+table(anes_20$agecat)
+```
+
+```{r}
+anes2020 <- make_anes_survey()
+svyby(~V202172, ~agecat, anes2020, svymean, na.rm = T)
+```
+
+Among 18- to 29-year-olds, the sample mean feeling toward transgender people is 66.24 degrees, and among those 60 and above 55.16 degrees. 
+
+Confidence intervals
+
+```{r}
+svyby(~V202172, ~agecat, anes2020, svymean, na.rm = T) %>% confint
+```
+
+## Hypothesis tests on means
+
+T-tests with `svyttest()`. For example, we may be interested in testing whether there is evidence of population-based differences, by gender, in feeling thermometer scores. One approach would be to calculate and compare 95 percent confidence intervals. Another is to directly test the hypothesis that the mean feeling differs across groups, a two-sample test. To compare, for example, feelings toward the “Me too movement” (feeling thermometer V202183), the svytest() function argument is the feeling thermometer V202183 by sex:
+
+```{r}
+svyttest(V202183 ~ sex, anes2020, na.rm = T)
+```
+
+Very low p-value, with 95% confidence, the difference is between 7.74 and 13.24.
+
+# Data visualization for polls
+
+```{r}
+table1 <- svytable(~V201345x, anes2020, round = T) %>% 
+  prop.table() * 100
+table1 %<>% as.data.frame()
+colnames(table1) <- c("Response", "Percentage")
+```
+
+```{r anal-elec-stud-1}
+ggplot(table1, aes(x = Response, y = Percentage)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Death penalty attitude", y = "Percentage")
+```
+
+To contrast death penalty support by respondent sex, we construct the cross-tabulation and save it as a dataframe
+
+```{r}
+table2 <- prop.table(svytable(~ V201345x + sex, anes2020, round = TRUE),
+  margin = 2
+) * 100
+table2 <- as.data.frame(table2)
+colnames(table2) <- c("Response", "sex", "Percentage")
+```
+
+```{r anal-elec-stud-2}
+ggplot(table2, aes(x = Response, y = Percentage, fill = sex)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Response", y = "Percentage") +
+  theme_minimal() +
+  theme(legend.position = "bottom") +
+  scale_fill_grey()
+```
+
+## Bar graph with error bars
+
+```{r}
+(error_table1 <- svymean(~V201345x, anes2020, na.rm = TRUE) %>% 
+   as.data.frame())
+```
+
+```{r}
+table1 %<>% cbind(error_table1)
+```
+
+```{r}
+settransform(table1, error = (1.96 * SE) * 100)
+row.names(table1) <- NULL
+table1
+```
+
+```{r anal-elec-stud-3}
+ggplot(table1, aes(x = Response, y = Percentage)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Death penalty attitude", y = "Percentage") +
+  geom_errorbar(aes(ymin = Percentage - error, ymax = Percentage + error),
+    width = 0.25
+  ) +
+  theme(legend.position = "bottom") +
+  theme_minimal()
+```
+
+```{r}
+table2_m <- svymean(~V201345x, subset(anes2020, sex == "1. Male"),
+  round = TRUE, na.rm = TRUE
+) %>% as.data.frame() * 100
+
+table2_f <- svymean(~V201345x, subset(anes2020, sex == "2. Female"),
+  round = TRUE, na.rm = TRUE) %>% as.data.frame() * 100
+
+table2_both <- rbind(table2_m, table2_f)
+table2<-cbind(table2, table2_both)
+table2 %<>%
+  mutate(error = (1.96*SE))
+```
+
+```{r anal-elec-stud-4}
+ggplot(table2, aes(x = Response, y = Percentage, fill=sex)) +
+  geom_bar(stat = "identity", position="dodge") +
+  labs(x = "Death penalty attitude", y = "Percentage") +
+  geom_errorbar(aes(ymin = Percentage - error,
+                    ymax = Percentage + error),
+      position = position_dodge(width = 0.8), width = 0.25) +
+  coord_flip() +
+  theme_minimal() +
+  theme(legend.position = "bottom") +
+  scale_fill_grey()
+```
+
+## Weighted histograms
+
+```{r anal-elec-stud-5}
+ggplot(anes_20) +
+  geom_histogram(aes(
+    x = V202179, y = after_stat(width * density) * 100,
+    weight = V200015b
+  ), bins = 10) +
+  labs(
+    x = "feelings toward 'Donald Trump'",
+    y = "Percentage of respondents"
+  )
+```
+
+
+

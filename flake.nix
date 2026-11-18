@@ -18,6 +18,7 @@
             texliveMedium
             ;
           inherit (pkgs.rPackages)
+            car
             cartogram
             codetools
             crsuggest
@@ -26,8 +27,12 @@
             ggrepel
             ggspatial
             gt
+            haven
+            jtools
+            kableExtra
             kit
             leaflet
+            memisc
             microbenchmark
             quanteda
             quanteda_textstats
@@ -37,6 +42,7 @@
             sf
             smacof
             styler
+            survey
             tidycensus
             tidyverse
             WDI
